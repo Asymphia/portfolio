@@ -3,7 +3,8 @@ import SliderSection from "@/components/landing/slider/slider-section"
 import AboutSection from "@/components/landing/about/about-section"
 import ProjectsSection from "@/components/landing/projects/projects-section"
 import CircleSection from "@/components/landing/circle/circle-section"
-import SkillstackSection from "@/components/landing/skillstack/skillstack-section";
+import SkillstackSection from "@/components/landing/skillstack/skillstack-section"
+import VisualSection from "@/components/landing/visual/visual-section"
 
 const LandingPage = () => {
     return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
             <ProjectsSection />
             <CircleSection />
             <SkillstackSection />
+            <VisualSection />
         </main>
     )
 }
