@@ -1,6 +1,10 @@
+import HeroSection from "@/components/landing/hero/hero-section"
+
 const LandingPage = () => {
     return (
-        <h1>test</h1>
+        <main>
+            <HeroSection />
+        </main>
     )
 }
 
