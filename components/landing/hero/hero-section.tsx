@@ -4,7 +4,7 @@ import Button from "@/components/ui/button"
 
 const HeroSection = () => {
     return (
-        <section className="container flex flex-col items-center pt-45">
+        <section className="container flex flex-col items-center pt-50">
             <h1 className="text-display-lg flex items-center gap-7 mb-3">
                 <span>Julia</span>
 
