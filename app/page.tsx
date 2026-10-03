@@ -3,6 +3,7 @@ import SliderSection from "@/components/landing/slider/slider-section"
 import AboutSection from "@/components/landing/about/about-section"
 import ProjectsSection from "@/components/landing/projects/projects-section"
 import CircleSection from "@/components/landing/circle/circle-section"
+import SkillstackSection from "@/components/landing/skillstack/skillstack-section";
 
 const LandingPage = () => {
     return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
             <AboutSection />
             <ProjectsSection />
             <CircleSection />
+            <SkillstackSection />
         </main>
     )
 }

@@ -1,4 +1,4 @@
-import StyledHeader from "@/components/ui/styledHeader"
+import StyledHeader from "@/components/ui/styled-header"
 import ProjectsGrid from "@/components/projects/projects-grid"
 
 const ProjectsSection = () => {
