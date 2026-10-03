@@ -1,6 +1,6 @@
 const LandingPage = () => {
     return (
-        <>div</>
+        <h1>test</h1>
     )
 }
 

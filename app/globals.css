@@ -1,1 +1,110 @@
 @import "tailwindcss";
+
+:root {
+    color-scheme: light;
+
+    --background: #fafafa;
+
+    --primary: #559dca;
+
+    --black: #000;
+    --white: #fff;
+
+    --grey-300: #eee;
+    --grey-500: #848484;
+    --grey-700: #1d1d1d;
+
+    --container-max: 1496px;
+    --gutter-x: clamp(1rem, 4vw, 2.5rem);
+}
+
+@theme inline {
+    --color-background: var(--background);
+
+    --color-primary: var(--primary);
+
+    --color-black: var(--black);
+    --color-white: var(--white);
+
+    --color-grey-300: var(--grey-300);
+    --color-grey-500: var(--grey-500);
+    --color-grey-700: var(--grey-700);
+
+
+    --font-inter: var(--font-inter);
+    --font-albert-sans: var(--font-albert-sans);
+
+
+    --text-display-md: clamp(5rem, 14vw, 12.5rem); /* 200px */
+    --text-display-md--line-height: 0.9;
+
+    --text-display-lg: clamp(6rem, 17vw, 15rem); /* 240px */
+    --text-display-lg--line-height: 0.9;
+
+    --text-display-fit: 21cqw; /* 100% */
+    --text-display-fit--line-height: 0.8;
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--grey-700);
+        font-family: var(--font-inter), system-ui, sans-serif;
+        font-size: 1rem;
+        letter-spacing: -0.02em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--black);
+        font-family: var(--font-albert-sans), system-ui, sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+    }
+
+    ::selection {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--background);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--grey-500);
+        border: 2px solid var(--background);
+        border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--grey-700);
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--grey-500) var(--background);
+        }
+    }
+}
+
+@utility container {
+    width: min(100% - (var(--gutter-x) * 2), var(--container-max));
+    margin-inline: auto;
+}
