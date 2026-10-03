@@ -4,7 +4,7 @@ import Tag from "@/components/ui/tag"
 const SingleProject = ({ item, className }: { item: project, className?: string }) => {
     return (
         <div className={`space-y-6 ${ className }`}>
-            <div className="h-100 w-full bg-grey-300" />
+            <div className="h-100 w-full bg-grey-300 rounded-sm" />
 
             <div className="flex flex-wrap gap-3">
                 {
