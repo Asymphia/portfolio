@@ -3,7 +3,7 @@ import FooterBottomLinks from "@/components/layout/footer/footer-bottom-links"
 
 const Footer = () => {
     return (
-        <section className="bg-black pt-6 pb-8 space-y-18">
+        <footer className="bg-black pt-6 pb-8 space-y-18 mb-0!">
             <FooterSlider />
 
             <h2 className="text-display-fit text-white text-center">
@@ -11,7 +11,7 @@ const Footer = () => {
             </h2>
 
             <FooterBottomLinks />
-        </section>
+        </footer>
     )
 }
 
