@@ -28,7 +28,7 @@ const SkillstackGrid = () => {
         <div className="grid grid-cols-5 gap-8 ml-42">
             {
                 skillstackItems.map(item => (
-                    <div className="bg-grey-300 flex items-center justify-center w-full aspect-square rounded-sm">
+                    <div className="bg-grey-300 flex items-center justify-center w-full aspect-square rounded-sm" key={ item.alt }>
                         <Image src={ item.icon } alt={ item.alt } key={ item.alt } />
                     </div>
                 ))
