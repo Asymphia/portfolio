@@ -41,7 +41,7 @@
     --text-display-lg: clamp(6rem, 17vw, 15rem); /* 240px */
     --text-display-lg--line-height: 0.9;
 
-    --text-display-fit: 21cqw; /* 100% */
+    --text-display-fit: 22cqw; /* 100% */
     --text-display-fit--line-height: 0.8;
 }
 
