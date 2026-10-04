@@ -176,22 +176,6 @@ const SkillstackGrid = () => {
         const mm = gsap.matchMedia()
 
         mm.add("(prefers-reduced-motion: no-preference)", () => {
-            gsap.fromTo(
-                grid,
-                { opacity: 0 },
-                {
-                    opacity: 1,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: grid,
-                        start: "top 95%",
-                        end: "top 60%",
-                        scrub: 0.8,
-                        refreshPriority: -1,
-                    },
-                }
-            )
-
             gsap.from(tiles, {
                 opacity: 0,
                 yPercent: 25,
@@ -214,6 +198,7 @@ const SkillstackGrid = () => {
         })
 
         return () => {
+            mm.revert()
             ro.disconnect()
             gsap.killTweensOf(tiles)
 
@@ -221,10 +206,6 @@ const SkillstackGrid = () => {
             grid.removeEventListener("pointermove", onMove)
             grid.removeEventListener("pointerup", onUp)
             grid.removeEventListener("pointercancel", onUp)
-
-            mm.revert()
-            ro.disconnect()
-            gsap.killTweensOf(tiles)
         }
     }, [])
 

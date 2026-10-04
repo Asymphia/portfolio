@@ -1,5 +1,6 @@
 import StyledHeader from "@/components/ui/styled-header"
 import SkillstackGrid from "@/components/landing/skillstack/skillstack-grid"
+import FadeIn from "@/components/ui/fade-in"
 
 const SkillstackSection = () => {
     return (
@@ -9,7 +10,9 @@ const SkillstackSection = () => {
                 tag="Skillstack"
             />
 
-            <SkillstackGrid />
+            <FadeIn>
+                <SkillstackGrid />
+            </FadeIn>
         </section>
     )
 }

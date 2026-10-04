@@ -1,6 +1,7 @@
 import StyledHeader from "@/components/ui/styled-header"
 import ContactLeftPanel from "@/components/landing/contact/contact-left-panel"
 import ContactForm from "@/components/landing/contact/contact-form"
+import FadeIn from "@/components/ui/fade-in"
 
 const ContactSection = () => {
     return (
@@ -10,10 +11,10 @@ const ContactSection = () => {
                 tag="Contact"
             />
 
-            <div className="grid grid-cols-2 items-start gap-21 ml-38">
+            <FadeIn className="grid grid-cols-2 items-start gap-21 ml-38">
                 <ContactLeftPanel />
                 <ContactForm />
-            </div>
+            </FadeIn>
         </section>
     )
 }
