@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const SingleProject = ({ item, className }: { item: Project, className?: string }) => {
     return (
-        <div className={`space-y-6 ${ className }`}>
+        <div data-project className={`space-y-6 ${ className }`}>
             <Image src={ className === "col-span-2" && item.featuredImageWide ? item.featuredImageWide : item.featuredImage } alt={`${item.title}'s page`} className="rounded-sm drop-shadow-xs" />
 
             <div className="flex flex-wrap gap-3">
