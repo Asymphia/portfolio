@@ -1,9 +1,11 @@
+import Marquee from "@/components/ui/marquee"
+
 const FooterSlider = () => {
     return (
-        <div className="flex flex-nowrap gap-6 overflow-x-clip">
+        <Marquee gap="1.5rem">
             {
                 [0, 1, 2, 3, 4, 5].map(element => (
-                    <div className="text-white flex items-center gap-4 shrink-0" key={ element }>
+                    <div className="text-white flex shrink-0 items-center gap-4" key={ element }>
                         <h3 className="text-white text-5xl">
                             Let’s talk
                         </h3>
@@ -20,7 +22,7 @@ const FooterSlider = () => {
                     </div>
                 ))
             }
-        </div>
+        </Marquee>
     )
 }
 
