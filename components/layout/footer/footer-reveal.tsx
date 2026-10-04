@@ -37,7 +37,8 @@ const FooterReveal = ({ children }: { children: ReactNode }) => {
                         trigger: wrapper,
                         start: "top bottom",
                         end: "bottom bottom",
-                        scrub: 0.8
+                        scrub: 0.8,
+                        refreshPriority: -1,
                     }
                 }
             )
