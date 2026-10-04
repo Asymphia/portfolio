@@ -5,10 +5,12 @@ import sportRes from "@/assets/projects/sport-res.png"
 import omega from "@/assets/projects/omega.png"
 import tqmSoft from "@/assets/projects/tqm-soft.png"
 import qlio from "@/assets/projects/qlio.png"
+import qlioWide from "@/assets/projects/qlio-wide.png"
 import rehab from "@/assets/projects/rehab.png"
 import pasieka from "@/assets/projects/pasieka.png"
 import rozanska from "@/assets/projects/rozanska.png"
 import inLove from "@/assets/projects/in-love.png"
+import inLoveWide from "@/assets/projects/in-love-wide.png"
 
 export type Project = {
     id: number
@@ -18,6 +20,7 @@ export type Project = {
     descriptionLong: string
     tags: string[]
     featuredImage: StaticImageData
+    featuredImageWide?: StaticImageData
     images?: StaticImageData[]
     year: number
     role: string
@@ -29,14 +32,14 @@ export type Project = {
     }
 }
 
-const Projects: Project[] = [
+export const projects: Project[] = [
     {
         id: 1,
         slug: "metoda-silvy-polska",
         title: "Metoda Silvy Polska",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
-        tags: ["WordPress", "Divi Builder", "Design", "Custom WordPress Plugin", "ACF", "Custom Post Type", "PHP"],
+        tags: ["WordPress", "Divi Builder", "Design", "Custom WordPress Plugin", "ACF", "PHP"],
         featuredImage: silva,
         year: 2026,
         role: "WordPress Developer",
@@ -55,7 +58,7 @@ const Projects: Project[] = [
         featuredImage: sportRes,
         year: 2026,
         role: "WordPress Developer",
-        isFeatured: true
+        isFeatured: false
     },
     {
         id: 3,
@@ -67,7 +70,7 @@ const Projects: Project[] = [
         featuredImage: omega,
         year: 2026,
         role: "WordPress Developer",
-        isFeatured: true,
+        isFeatured: false,
         links: {
             websiteLink: "https://omega-rental.com.pl/"
         }
@@ -92,6 +95,7 @@ const Projects: Project[] = [
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: qlio,
+        featuredImageWide: qlioWide,
         year: 2025,
         role: "WordPress Developer",
         isFeatured: true,
@@ -109,7 +113,7 @@ const Projects: Project[] = [
         featuredImage: rehab,
         year: 2025,
         role: "WordPress Developer",
-        isFeatured: true,
+        isFeatured: false,
         links: {
             websiteLink: "https://rehab-pro.pl/"
         }
@@ -135,7 +139,7 @@ const Projects: Project[] = [
         title: "Ewa Różańska",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
-        tags: ["WordPress", "Divi Builder", "WooCommerce", "Custom Plugin", "PHP"],
+        tags: ["WordPress", "Divi Builder", "WooCommerce", "Custom Plugin", "PHP", "React"],
         featuredImage: rozanska,
         year: 2025,
         role: "WordPress Developer",
@@ -153,6 +157,7 @@ const Projects: Project[] = [
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: inLove,
+        featuredImageWide: inLoveWide,
         year: 2025,
         role: "WordPress Developer",
         isFeatured: true,

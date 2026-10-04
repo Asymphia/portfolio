@@ -1,6 +1,12 @@
 "use client"
 
 import tqmSoft from "@/assets/projects/tqm-soft.png"
+import inLove from "@/assets/projects/in-love.png"
+import qlio from "@/assets/projects/qlio.png"
+import rehab from "@/assets/projects/rehab.png"
+import omega from "@/assets/projects/omega.png"
+import sportRes from "@/assets/projects/sport-res.png"
+
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import Image from "next/image"
@@ -8,11 +14,11 @@ import Image from "next/image"
 const SliderSection = () => {
     const slides = [
         { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
+        { image: inLove, alt: "Screenshot of a In Love's website" },
+        { image: qlio, alt: "Screenshot of a QLIO's website" },
+        { image: rehab, alt: "Screenshot of a Rehab Pro's website" },
+        { image: omega, alt: "Screenshot of a Omega Rental's website" },
+        { image: sportRes, alt: "Screenshot of a Sport Res' website" },
     ]
 
     const viewportRef = useRef<HTMLDivElement>(null)

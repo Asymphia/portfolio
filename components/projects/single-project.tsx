@@ -1,10 +1,11 @@
-import { project } from "@/components/projects/projects-grid"
+import { Project } from "@/lib/projects"
 import Tag from "@/components/ui/tag"
+import Image from "next/image"
 
-const SingleProject = ({ item, className }: { item: project, className?: string }) => {
+const SingleProject = ({ item, className }: { item: Project, className?: string }) => {
     return (
         <div className={`space-y-6 ${ className }`}>
-            <div className="h-100 w-full bg-grey-300 rounded-sm" />
+            <Image src={ className === "col-span-2" && item.featuredImageWide ? item.featuredImageWide : item.featuredImage } alt={`${item.title}'s page`} className="rounded-sm drop-shadow-xs" />
 
             <div className="flex flex-wrap gap-3">
                 {
@@ -20,7 +21,7 @@ const SingleProject = ({ item, className }: { item: project, className?: string 
                 </h3>
 
                 <p>
-                    { item.description }
+                    { item.descriptionShort }
                 </p>
             </div>
         </div>
