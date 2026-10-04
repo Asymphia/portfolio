@@ -11,16 +11,16 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import Image from "next/image"
 
-const SliderSection = () => {
-    const slides = [
-        { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
-        { image: inLove, alt: "Screenshot of a In Love's website" },
-        { image: qlio, alt: "Screenshot of a QLIO's website" },
-        { image: rehab, alt: "Screenshot of a Rehab Pro's website" },
-        { image: omega, alt: "Screenshot of a Omega Rental's website" },
-        { image: sportRes, alt: "Screenshot of a Sport Res' website" },
-    ]
+const slides = [
+    { image: tqmSoft, alt: "Screenshot of a TQM Soft's website" },
+    { image: inLove, alt: "Screenshot of a In Love's website" },
+    { image: qlio, alt: "Screenshot of a QLIO's website" },
+    { image: rehab, alt: "Screenshot of a Rehab Pro's website" },
+    { image: omega, alt: "Screenshot of a Omega Rental's website" },
+    { image: sportRes, alt: "Screenshot of a Sport Res' website" },
+]
 
+const SliderSection = () => {
     const viewportRef = useRef<HTMLDivElement>(null)
     const trackRef = useRef<HTMLDivElement>(null)
     const setRef = useRef<HTMLDivElement>(null)

@@ -5,7 +5,7 @@ const ProjectsGrid = () => {
     const featured = projects.filter(project => project.isFeatured)
 
     return (
-        <div className="grid grid-cols-2 gap-18">
+        <div className="grid grid-cols-2 gap-20">
             {
                 featured.map((project, key) => (
                     <SingleProject key={ project.title } item={ project } className={`${ key % 3 === 2 ? "col-span-2" : "" }`} />
