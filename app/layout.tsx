@@ -12,12 +12,14 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: LayoutProps<"/">) => {
     return (
         <html lang="en" className={`${ AlbertSansFont.variable } ${ InterFont.variable }`}>
-            <body className="space-y-50 relative">
-                <Menu />
+            <body>
+                <div className="space-y-50 relative">
+                    <Menu />
 
-                { children }
+                    { children }
 
-                <Footer />
+                    <Footer />
+                </div>
             </body>
         </html>
     )
