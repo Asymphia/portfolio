@@ -6,9 +6,10 @@ interface StyledHeaderProps {
     tag: string
     addButton?: boolean
     buttonText?: string
+    addText?: boolean
 }
 
-const StyledHeader = ({ header, tag, addButton=false, buttonText }: StyledHeaderProps) => {
+const StyledHeader = ({ header, tag, addButton=false, buttonText, addText=false }: StyledHeaderProps) => {
     return (
         <div className="flex justify-between items-end">
             <header className="flex items-start gap-15">
@@ -16,7 +17,7 @@ const StyledHeader = ({ header, tag, addButton=false, buttonText }: StyledHeader
                     { tag }
                 </AccentText>
 
-                <h2 className="text-6xl/17 max-w-175">
+                <h2 className="text-6xl/17 max-w-200">
                     { header }
                 </h2>
             </header>
@@ -26,6 +27,14 @@ const StyledHeader = ({ header, tag, addButton=false, buttonText }: StyledHeader
                     <Button>
                         { buttonText }
                     </Button>
+                )
+            }
+
+            {
+                addText && (
+                    <p className="text-2xl text-black font-albert-sans font-medium">
+                        2021 - 2026
+                    </p>
                 )
             }
         </div>

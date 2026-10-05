@@ -3,18 +3,15 @@ import ProjectsGrid from "@/components/projects/projects-grid"
 import { projects } from "@/lib/projects"
 
 const ProjectsSection = () => {
-    const featured = projects.filter(project => project.isFeatured)
-
     return (
-        <section className="container space-y-20">
+        <section className="container space-y-22 pt-15 border-t border-grey-300">
             <StyledHeader
-                header="Selected works crafted with detail & purpose."
+                header="Selected work exploring ideas, challenges, and solutions."
                 tag="Projects"
-                addButton={ true }
-                buttonText="View all"
+                addText={ true }
             />
 
-            <ProjectsGrid items={ featured } />
+            <ProjectsGrid items={ projects } />
         </section>
     )
 }

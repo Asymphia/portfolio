@@ -3,7 +3,7 @@ import Link from "next/link";
 const Nav = () => {
     const links = [
         { title: 'About', href: '/' },
-        { title: 'Projects', href: '/' },
+        { title: 'Projects', href: '/projects' },
         { title: 'Skillstack', href: '/' },
     ]
 
