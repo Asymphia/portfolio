@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 
 import figma from "@/assets/logos/figma.png"
@@ -15,8 +14,6 @@ import wordpress from "@/assets/logos/wordpress.png"
 import rootsSage from "@/assets/logos/roots-sage.png"
 import acf from "@/assets/logos/acf.png"
 import php from "@/assets/logos/php.png"
-
-gsap.registerPlugin(ScrollTrigger)
 
 const skillstackItems = [
     { icon: figma, alt: "Figma's logo" },
@@ -173,32 +170,7 @@ const SkillstackGrid = () => {
         grid.addEventListener("pointerup", onUp)
         grid.addEventListener("pointercancel", onUp)
 
-        const mm = gsap.matchMedia()
-
-        mm.add("(prefers-reduced-motion: no-preference)", () => {
-            gsap.from(tiles, {
-                opacity: 0,
-                yPercent: 25,
-                scale: 0.92,
-                duration: 1.2,
-                ease: EASE,
-                stagger: 0.07,
-                onStart: () => tiles.forEach(tile => { tile.style.transition = "none" }),
-                onComplete: () => {
-                    tiles.forEach(tile => { tile.style.transition = "" })
-                    gsap.set(tiles, { clearProps: "opacity" })
-                },
-                scrollTrigger: {
-                    trigger: grid,
-                    start: "top 80%",
-                    once: true,
-                    refreshPriority: -1,
-                },
-            })
-        })
-
         return () => {
-            mm.revert()
             ro.disconnect()
             gsap.killTweensOf(tiles)
 

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Nav from "@/components/layout/menu/nav"
 import Button from "@/components/ui/button"
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 
 const Menu = () => {
     return (
@@ -15,7 +16,7 @@ const Menu = () => {
 
             <Nav />
 
-            <Button style="secondary" isSmaller={ true }>
+            <Button style="secondary" isSmaller={ true } icon={ PaperAirplaneIcon }>
                 Get in touch
             </Button>
         </section>

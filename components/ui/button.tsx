@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ComponentProps, ComponentType, ReactNode } from "react"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 
 interface ButtonProps {
@@ -6,19 +6,20 @@ interface ButtonProps {
     style?: "primary" | "secondary"
     isSmaller?: boolean
     className?: string
+    icon?: ComponentType<ComponentProps<'svg'>>
 }
 
-const Button = ({ children, style="primary", isSmaller=false, className }: ButtonProps) => {
+const Button = ({ children, style="primary", isSmaller=false, className, icon: Icon=ArrowRightIcon }: ButtonProps) => {
     return (
         <button
-            className={`border border-black rounded-sm flex cursor-pointer w-fit 
+            className={`border border-black rounded-sm flex items-center cursor-pointer w-fit 
             ${ style === "primary" ? "bg-black text-white" : "bg-background text-black" }
             ${ isSmaller ? "px-4 py-2 gap-2 text-sm" : "px-6 py-3 gap-3 text-base" }
             ${ className } `}
         >
             { children }
 
-            <ArrowRightIcon className="w-4" />
+            <Icon className={`stroke-2 ${ isSmaller ? "size-3" : "size-4" }`} />
         </button>
     )
 }

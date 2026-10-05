@@ -7,6 +7,7 @@ import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
 import tqmSoft from "@/assets/projects/tqm-soft.png"
 import Button from "@/components/ui/button"
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -25,7 +26,7 @@ const HeroSection = () => {
         const frame = frameRef.current!
         const p = pRef.current!
         const cta = ctaRef.current!
-        
+
         const words = h1.querySelectorAll<HTMLElement>("[data-split]")
         const show = [h1, p, cta]
 
@@ -123,7 +124,7 @@ const HeroSection = () => {
             </p>
 
             <div ref={ ctaRef } className="invisible flex gap-6">
-                <Button style="secondary">
+                <Button style="secondary" icon={ PaperAirplaneIcon }>
                     Get in touch
                 </Button>
 

@@ -5,20 +5,18 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 
-import tqmSoft from "@/assets/projects/tqm-soft.png"
-import inLove from "@/assets/projects/in-love.png"
-import qlio from "@/assets/projects/qlio.png"
-import rehab from "@/assets/projects/rehab.png"
-import omega from "@/assets/projects/omega.png"
+import arkweb from "@/assets/projects/arkweb.png"
+import scribre from "@/assets/projects/scribre.png"
+import musicshare from "@/assets/projects/musicshare.png"
+import corgi from "@/assets/projects/corgi.png"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
-    { image: tqmSoft, title: "TQM Soft" },
-    { image: inLove, title: "In Love" },
-    { image: qlio, title: "QLIO" },
-    { image: rehab, title: "Rehab Pro" },
-    { image: omega, title: "Omega Rental" },
+    { image: arkweb, title: "Arkweb" },
+    { image: scribre, title: "Scribre" },
+    { image: musicshare, title: "MusicShare" },
+    { image: corgi, title: "Corgi" }
 ]
 
 const RATIO = projects[0].image.width / projects[0].image.height

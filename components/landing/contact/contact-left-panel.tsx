@@ -1,6 +1,7 @@
 import Button from "@/components/ui/button"
 import Link from "next/link"
 import ContactLinks from "@/components/landing/contact/contact-links"
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline"
 
 const ContactLeftPanel = () => {
     return (
@@ -11,7 +12,7 @@ const ContactLeftPanel = () => {
                     or grab my resume. I reply within two working days.
                 </p>
 
-                <Button>
+                <Button icon={ ArrowDownTrayIcon }>
                     Download resume
                 </Button>
             </div>

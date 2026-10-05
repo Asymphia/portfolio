@@ -6,18 +6,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
 import AccentText from "@/components/ui/accent-text"
+
 import tqmSoft from "@/assets/projects/tqm-soft.png"
 import inLove from "@/assets/projects/in-love.png"
 import qlio from "@/assets/projects/qlio.png"
 import rehab from "@/assets/projects/rehab.png"
 import omega from "@/assets/projects/omega.png"
 import sportRes from "@/assets/projects/sport-res.png"
+import pasieka from "@/assets/projects/pasieka.png"
+import corgi from "@/assets/projects/corgi.png"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const words = ["Lorem ipsum", "Dolor sit", "Amet elit"]
 
-const photos = [tqmSoft, inLove, qlio, rehab, omega, sportRes, tqmSoft, inLove]
+const photos = [tqmSoft, inLove, qlio, rehab, omega, sportRes, pasieka, corgi]
 const TILTS = [-18, 12, -8, 22, -14, 9, -22, 15]
 
 const START_BG = "#1d1d1d"
