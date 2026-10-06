@@ -4,7 +4,7 @@ import AboutScroll from "./about-scroll"
 
 const AboutSection = () => {
     return (
-        <AboutScroll>
+        <AboutScroll id="about">
             <div className="container space-y-12">
                 <AboutHeader />
 

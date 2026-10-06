@@ -5,7 +5,7 @@ import FadeIn from "@/components/ui/fade-in"
 
 const ContactSection = () => {
     return (
-        <section className="container space-y-15">
+        <section className="container space-y-15" id="contact">
             <StyledHeader
                 header="Hiring a front-end developer? Let’s talk."
                 tag="Contact"

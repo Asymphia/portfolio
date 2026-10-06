@@ -3,9 +3,9 @@ import RollingText from "@/components/ui/rolling-text"
 
 const Nav = () => {
     const links = [
-        { title: 'About', href: '/' },
+        { title: 'About', href: '/#about' },
         { title: 'Projects', href: '/projects' },
-        { title: 'Skillstack', href: '/' },
+        { title: 'Skillstack', href: '/#skillstack' },
     ]
 
     return (

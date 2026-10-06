@@ -21,7 +21,7 @@ const Menu = () => {
 
             <Nav />
 
-            <Button style="secondary" isSmaller={ true } icon={ PaperAirplaneIcon }>
+            <Button style="secondary" isSmaller={ true } icon={ PaperAirplaneIcon } href="#contact">
                 Get in touch
             </Button>
         </section>

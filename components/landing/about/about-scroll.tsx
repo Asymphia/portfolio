@@ -11,7 +11,7 @@ const SCROLL_LENGTH = 1.5
 const STAGGER = 0.1
 const WAVE_WORDS = 1
 
-const AboutScroll = ({ children }: { children: ReactNode }) => {
+const AboutScroll = ({ children, id="" }: { children: ReactNode, id?: string }) => {
     const sectionRef = useRef<HTMLElement>(null)
 
     useEffect(() => {
@@ -82,7 +82,7 @@ const AboutScroll = ({ children }: { children: ReactNode }) => {
 
     return (
         <div>
-            <section ref={ sectionRef }>
+            <section ref={ sectionRef } id={ id }>
                 { children }
             </section>
         </div>
