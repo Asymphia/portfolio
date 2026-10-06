@@ -11,7 +11,7 @@ interface InputProps {
 
 const Input = ({ type, label, placeholder, name, required=true, className }: InputProps) => {
     return (
-        <label>
+        <label className={ className }>
             <Label label={ label } multichoice={ false } required={ required } />
 
             <input
@@ -19,7 +19,8 @@ const Input = ({ type, label, placeholder, name, required=true, className }: Inp
                 placeholder={ placeholder }
                 name={ name }
                 required={ required }
-                className="border border-grey-500 text-grey-500 placeholder:text-grey-500 rounded-xs px-4 py-3 w-full"
+                className="border border-grey-500 text-grey-500 placeholder:text-grey-500 focus:outline-none rounded-xs px-4 py-3 w-full
+                    transition-all ease-[cubic-bezier(0.16,1,0.3,1)] duration-500 hover:border-grey-700/75 focus:border-grey-700 focus:text-grey-700"
             />
         </label>
     )

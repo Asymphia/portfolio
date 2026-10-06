@@ -16,7 +16,8 @@ const Textarea = ({ name, placeholder, label, required=false, className }: Texta
             <textarea
                 name={ name }
                 placeholder={ placeholder }
-                className="border border-grey-500 text-grey-500 placeholder:text-grey-500 rounded-xs px-4 py-3 w-full"
+                className="border border-grey-500 text-grey-500 placeholder:text-grey-500 rounded-xs px-4 py-3 w-full resize-none focus:outline-none
+                    transition-all ease-[cubic-bezier(0.16,1,0.3,1)] duration-500 hover:border-grey-700/75 focus:border-grey-700 focus:text-grey-700"
                 rows={ 5 }
             />
         </label>
