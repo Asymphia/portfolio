@@ -20,6 +20,7 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
     const viewportRef = useRef<HTMLDivElement>(null)
     const trackRef = useRef<HTMLDivElement>(null)
     const setRef = useRef<HTMLDivElement>(null)
+    const cloneRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const viewport = viewportRef.current!
@@ -70,22 +71,38 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
 
         gsap.ticker.add(tick)
 
+        let moved = false
+        let startX = 0
+
         const onDown = (e: PointerEvent) => {
             if (e.pointerType === "mouse" && e.button !== 0) {
                 return
             }
 
             dragging = true
+            moved = false
             dragVel = 0
+            startX = e.clientX
 
             lastPointerX = e.clientX
             lastPointerT = performance.now()
-
-            viewport.setPointerCapture(e.pointerId)
         }
 
         const onMove = (e: PointerEvent) => {
             if (!dragging) {
+                return
+            }
+
+            if (!moved) {
+                if (Math.abs(e.clientX - startX) < 5) {
+                    return
+                }
+
+                moved = true
+                viewport.setPointerCapture(e.pointerId)
+                lastPointerX = e.clientX
+                lastPointerT = performance.now()
+
                 return
             }
 
@@ -107,11 +124,23 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
 
             dragging = false
 
+            if (!moved) {
+                return
+            }
+
             const idle = performance.now() - lastPointerT > 80
             vel = idle ? 0 : gsap.utils.clamp(-MAX_FLING, MAX_FLING, dragVel)
 
             if (viewport.hasPointerCapture(e.pointerId)) {
                 viewport.releasePointerCapture(e.pointerId)
+            }
+        }
+
+        const onClick = (e: MouseEvent) => {
+            if (moved) {
+                e.preventDefault()
+                e.stopPropagation()
+                moved = false
             }
         }
 
@@ -125,6 +154,7 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
             hovering = false
         }
 
+        viewport.addEventListener("click", onClick, true)
         viewport.addEventListener("pointerdown", onDown)
         viewport.addEventListener("pointermove", onMove)
         viewport.addEventListener("pointerup", onUp)
@@ -144,8 +174,15 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
             viewport.removeEventListener("pointercancel", onUp)
             viewport.removeEventListener("pointerenter", onEnter)
             viewport.removeEventListener("pointerleave", onLeave)
+            viewport.removeEventListener("click", onClick, true)
         }
     }, [speed, hoverSlowdown])
+
+    useEffect(() => {
+        cloneRef.current
+            ?.querySelectorAll<HTMLElement>("a, button, input, select, textarea, [tabindex]")
+            .forEach(el => el.tabIndex = -1)
+    }, [children])
 
     return (
         <div ref={ viewportRef } className="touch-pan-y overflow-hidden select-none">
@@ -154,8 +191,8 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
                     [0, 1].map(copy => (
                         <div
                             key={ copy }
-                            ref={ copy === 0 ? setRef : undefined }
-                            inert={ copy === 1 }
+                            ref={ copy === 0 ? setRef : cloneRef }
+                            aria-hidden={ copy === 1 }
                             className="flex shrink-0 items-start"
                             style={{ gap, paddingRight: gap }}
                         >

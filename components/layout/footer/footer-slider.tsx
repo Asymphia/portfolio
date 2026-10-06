@@ -8,9 +8,9 @@ const FooterSlider = () => {
             {
                 [0, 1, 2, 3, 4, 5].map(element => (
                     <div className="text-white flex shrink-0 items-center gap-4" key={ element }>
-                        <Link href="#contact">
+                        <Link href="#contact" className="transition-all hover:opacity-80 active:opacity-60">
                             <RollingText>
-                                <h3 className="text-white transition-all hover:opacity-80 active:opacity-60 text-5xl">
+                                <h3 className="text-white text-5xl">
                                     Let’s talk
                                 </h3>
                             </RollingText>
