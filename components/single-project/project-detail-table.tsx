@@ -9,6 +9,13 @@ type DetailRow = {
     href?: string
 }
 
+const Line = ({ position }: { position: "top" | "bottom" }) => (
+    <span
+        data-reveal="line"
+        className={`absolute left-0 h-px w-full bg-grey-300 ${ position === "top" ? "top-0" : "bottom-0" }`}
+    />
+)
+
 const ProjectDetailTable = ({ project }: { project: Project }) => {
     const elements: DetailRow[] = [
         { tag: "Year", value: project.year },
@@ -29,22 +36,30 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
             {
                 elements.map((element, i) => (
                     element.value && (
-                        <div key={ i } className={`flex items-center justify-between py-4 ${ i === 0 ? "border-y" : "border-b" } border-grey-300`}>
-                            <p>
+                        <div key={ i } className="relative flex items-center justify-between py-4">
+                            {
+                                i === 0 && <Line position="top" />
+                            }
+
+                            <Line position="bottom" />
+
+                            <p data-reveal="cell">
                                 { element.tag }
                             </p>
 
                             {
                                 element.href ? (
                                     <Link href={ element.href } className="font-semibold flex items-center gap-2">
-                                        { element.value }
+                                        <span data-reveal="cell">
+                                            { element.value }
+                                        </span>
 
-                                        <ArrowUpRightIcon className="size-5 stroke-2" />
+                                        <ArrowUpRightIcon data-reveal="item" className="size-5 stroke-2" />
                                     </Link>
                                 ) : (
-                                <p className="font-semibold">
-                                    { element.value }
-                                </p>
+                                    <p data-reveal="cell" className="font-semibold">
+                                        { element.value }
+                                    </p>
                                 )
                             }
                         </div>
@@ -52,10 +67,14 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
                 ))
             }
 
-            <div className="border-b border-grey-300 py-4 flex flex-wrap items-center gap-3">
+            <div className="relative py-4 flex flex-wrap items-center gap-3">
+                <Line position="bottom" />
+
                 {
                     project.tags.map(tag => (
-                        <Tag text={ tag } key={ tag } size="small" />
+                        <span key={ tag } data-reveal="item">
+                            <Tag text={ tag } size="small" />
+                        </span>
                     ))
                 }
             </div>
