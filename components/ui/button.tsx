@@ -45,14 +45,14 @@ const Button = ({ children, style="primary", isSmaller=false, className="", icon
 
     if (href) {
         return (
-            <Link href={ href } className={ classes + `${ disabled ? "pointer-events-none opacity-50!" : "" }` }>
+            <Link href={ href } className={ classes + `${ disabled ? "pointer-events-none opacity-50" : "" }` }>
                 { content }
             </Link>
         )
     }
 
     return (
-        <button className={ classes + `${ disabled ? "pointer-events-none opacity-50!" : "" }` } disabled={ disabled }>
+        <button className={ classes + `${ disabled ? "pointer-events-none opacity-50" : "" }` } disabled={ disabled }>
             { content }
         </button>
     )
