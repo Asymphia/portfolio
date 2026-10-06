@@ -6,7 +6,11 @@ import Link from "next/link"
 const SingleProject = ({ item, className }: { item: Project, className?: string }) => {
     return (
         <Link href={`/projects/${ item.slug}`} data-project className={`space-y-6 ${ className }`}>
-            <Image src={ className === "col-span-2" && item.featuredImageWide ? item.featuredImageWide : item.featuredImage } alt={`${item.title}'s page`} className="rounded-sm drop-shadow-xs" />
+            <Image
+                src={ className === "col-span-2" && item.featuredImageWide ? item.featuredImageWide : item.featuredImage }
+                alt={`${item.title}'s page`}
+                className="rounded-sm drop-shadow-xs border border-grey-300"
+            />
 
             <div className="flex flex-wrap gap-3">
                 {

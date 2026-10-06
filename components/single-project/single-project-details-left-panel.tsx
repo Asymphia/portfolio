@@ -5,7 +5,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline"
 
 const SingleProjectDetailLeftPanel = ({ project }: { project: Project }) => {
     return (
-        <div className="space-y-15">
+        <div className="space-y-15 sticky top-28 self-start h-fit">
             <h1 className="text-8xl">
                 { project.title }
             </h1>

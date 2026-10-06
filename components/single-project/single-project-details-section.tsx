@@ -4,7 +4,7 @@ import ProjectImages from "@/components/single-project/project-images"
 
 const SingleProjectDetailsSection = ({ project }: { project: Project }) => {
     return (
-        <section className="container grid grid-cols-2 gap-25 pt-28">
+        <section className="container grid grid-cols-[1fr_1.2fr] gap-25 pt-28 relative items-start">
             <SingleProjectDetailLeftPanel project={ project } />
 
             {
