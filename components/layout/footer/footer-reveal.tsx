@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, type ReactNode } from "react"
+import { usePathname } from "next/navigation"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const START_INSET = 4
 
 const FooterReveal = ({ children }: { children: ReactNode }) => {
+    const pathname = usePathname()
     const wrapperRef = useRef<HTMLDivElement>(null)
     const innerRef = useRef<HTMLDivElement>(null)
 
@@ -16,13 +18,24 @@ const FooterReveal = ({ children }: { children: ReactNode }) => {
         const wrapper = wrapperRef.current!
         const inner = innerRef.current!
 
-        const syncHeight = () => {
-            wrapper.style.height = `${ inner.offsetHeight }px`
-            ScrollTrigger.refresh()
+        ScrollTrigger.clearScrollMemory()
+
+        if (!window.location.hash) {
+            window.scrollTo({ top: 0, behavior: "instant" })
         }
 
-        const ro = new ResizeObserver(syncHeight)
-        ro.observe(inner)
+        const refresh = gsap.delayedCall(0.1, () => ScrollTrigger.refresh(true)).pause()
+
+        const syncHeight = () => {
+            wrapper.style.height = `${ inner.offsetHeight }px`
+            refresh.restart(true)
+        }
+
+        const roInner = new ResizeObserver(syncHeight)
+        roInner.observe(inner)
+
+        const roBody = new ResizeObserver(() => refresh.restart(true))
+        roBody.observe(document.body)
 
         const mm = gsap.matchMedia()
 
@@ -44,11 +57,15 @@ const FooterReveal = ({ children }: { children: ReactNode }) => {
             )
         })
 
+        refresh.restart(true)
+
         return () => {
-            ro.disconnect()
+            refresh.kill()
+            roInner.disconnect()
+            roBody.disconnect()
             mm.revert()
         }
-    }, [])
+    }, [pathname])
 
     return (
         <div ref={ wrapperRef } className="relative [clip-path:inset(0)]">
