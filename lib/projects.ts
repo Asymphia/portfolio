@@ -31,7 +31,11 @@ import tqmSoft5 from "@/assets/projects-screenshots/tqm/tqm-soft5.png"
 import tqmSoft6 from "@/assets/projects-screenshots/tqm/tqm-soft6.png"
 
 import qlio from "@/assets/projects/qlio.png"
-import qlioWide from "@/assets/projects/qlio-wide.png"
+import qlio1 from "@/assets/projects-screenshots/qlio/qlio1.png"
+import qlio2 from "@/assets/projects-screenshots/qlio/qlio2.png"
+import qlio3 from "@/assets/projects-screenshots/qlio/qlio3.png"
+import qlio4 from "@/assets/projects-screenshots/qlio/qlio4.png"
+import qlio5 from "@/assets/projects-screenshots/qlio/qlio5.png"
 
 import rehab from "@/assets/projects/rehab.png"
 import rehab1 from "@/assets/projects-screenshots/rehab/rehab1.png"
@@ -60,11 +64,35 @@ import rozanska8 from "@/assets/projects-screenshots/rozanska/rozanska8.png"
 import rozanska9 from "@/assets/projects-screenshots/rozanska/rozanska9.png"
 
 import inLove from "@/assets/projects/in-love.png"
-import inLoveWide from "@/assets/projects/in-love-wide.png"
 import inLove1 from "@/assets/projects-screenshots/in-love/in-love1.png"
 import inLove2 from "@/assets/projects-screenshots/in-love/in-love2.png"
 import inLove3 from "@/assets/projects-screenshots/in-love/in-love3.png"
 import inLove4 from "@/assets/projects-screenshots/in-love/in-love4.png"
+
+import sluja from "@/assets/projects/sluja.png"
+import sluja1 from "@/assets/projects-screenshots/sluja/sluja1.png"
+import sluja2 from "@/assets/projects-screenshots/sluja/sluja2.png"
+import sluja3 from "@/assets/projects-screenshots/sluja/sluja3.png"
+import sluja4 from "@/assets/projects-screenshots/sluja/sluja4.png"
+import sluja5 from "@/assets/projects-screenshots/sluja/sluja5.png"
+import sluja6 from "@/assets/projects-screenshots/sluja/sluja6.png"
+
+import janosik from "@/assets/projects/janosik.png"
+import janosik1 from "@/assets/projects-screenshots/janosik/janosik1.png"
+import janosik2 from "@/assets/projects-screenshots/janosik/janosik2.png"
+import janosik3 from "@/assets/projects-screenshots/janosik/janosik3.png"
+import janosik4 from "@/assets/projects-screenshots/janosik/janosik4.png"
+import janosik5 from "@/assets/projects-screenshots/janosik/janosik5.png"
+
+import matdev from "@/assets/projects/matdev.png"
+import matdev1 from "@/assets/projects-screenshots/matdev/matdev1.png"
+import matdev2 from "@/assets/projects-screenshots/matdev/matdev2.png"
+import matdev3 from "@/assets/projects-screenshots/matdev/matdev3.png"
+import matdev4 from "@/assets/projects-screenshots/matdev/matdev4.png"
+import matdev5 from "@/assets/projects-screenshots/matdev/matdev5.png"
+import matdev6 from "@/assets/projects-screenshots/matdev/matdev6.png"
+import matdev7 from "@/assets/projects-screenshots/matdev/matdev7.png"
+import matdev8 from "@/assets/projects-screenshots/matdev/matdev8.png"
 
 import musicshare from "@/assets/projects/musicshare.png"
 
@@ -98,7 +126,6 @@ export type Project = {
     descriptionLong: string
     tags: string[]
     featuredImage: StaticImageData
-    featuredImageWide?: StaticImageData
     images?: ProjectImage[]
     year: number
     role: string
@@ -107,6 +134,7 @@ export type Project = {
         websiteLink?: string
         pluginRepoLink?: string
         projectRepoLink?: string
+        projectDownloadLink?: string
     }
 }
 
@@ -174,6 +202,32 @@ export const projects: Project[] = [
         isFeatured: false,
         links: {
             websiteLink: "https://omega-rental.com.pl/"
+        }
+    },
+    {
+        id: 3,
+        slug: "matdev-pm",
+        title: "MatDev PM",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["Next.js", "GSAP", "Electron", "Tailwind"],
+        featuredImage: matdev,
+        images: [
+            { image: matdev1, alt: "MatDev PM app - project view" },
+            { image: matdev2, alt: "MatDev PM app - users" },
+            { image: matdev3, alt: "MatDev PM app - project details" },
+            { image: matdev4, alt: "MatDev PM app - Gantt chart" },
+            { image: matdev5, alt: "MatDev PM app - budgets" },
+            { image: matdev6, alt: "MatDev PM app - labs" },
+            { image: matdev7, alt: "MatDev PM app - editing project" },
+            { image: matdev8, alt: "MatDev PM app - adding new user" }
+        ],
+        year: 2026,
+        role: "Front-end developer",
+        isFeatured: false,
+        links: {
+            projectRepoLink: "https://github.com/Asymphia/matdev-pm",
+            projectDownloadLink: "https://github.com/kpustelak/matdev-pm-backend/releases"
         }
     },
     {
@@ -252,7 +306,13 @@ export const projects: Project[] = [
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: qlio,
-        featuredImageWide: qlioWide,
+        images: [
+            { image: qlio1, alt: "QLIO website -  hero" },
+            { image: qlio2, alt: "QLIO website - about us" },
+            { image: qlio3, alt: "QLIO website - mobile-first" },
+            { image: qlio4, alt: "QLIO website - we are the fix" },
+            { image: qlio5, alt: "QLIO website - timeline" }
+        ],
         year: 2025,
         role: "WordPress Developer",
         isFeatured: true,
@@ -355,7 +415,6 @@ export const projects: Project[] = [
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: inLove,
-        featuredImageWide: inLoveWide,
         images: [
             { image: inLove1, alt: "In Love Wedding Dresses website -  hero" },
             { image: inLove2, alt: "In Love Wedding Dresses website - about us" },
@@ -367,6 +426,51 @@ export const projects: Project[] = [
         isFeatured: true,
         links: {
             websiteLink: "https://studiomodyinlove.pl/"
+        }
+    },
+    {
+        id: 13,
+        slug: "sluja",
+        title: "Konstrukcje Stalowe Słuja",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["WordPress", "Divi Builder", "Design"],
+        featuredImage: sluja,
+        images: [
+            { image: sluja1, alt: "Konstrukcje Stalowe Słuja website -  hero" },
+            { image: sluja2, alt: "Konstrukcje Stalowe Słuja website - our offer" },
+            { image: sluja3, alt: "Konstrukcje Stalowe Słuja website - certificates" },
+            { image: sluja4, alt: "Konstrukcje Stalowe Słuja website - our offer page" },
+            { image: sluja5, alt: "Konstrukcje Stalowe Słuja website - certificates page" },
+            { image: sluja6, alt: "Konstrukcje Stalowe Słuja website - gallery" },
+        ],
+        year: 2025,
+        role: "WordPress Developer",
+        isFeatured: false,
+        links: {
+            websiteLink: "https://konstrukcjesluja.pl/"
+        }
+    },
+    {
+        id: 14,
+        slug: "janosik",
+        title: "Janosik",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["WordPress", "Divi Builder", "Design"],
+        featuredImage: janosik,
+        images: [
+            { image: janosik1, alt: "Janosik website -  hero" },
+            { image: janosik2, alt: "Janosik website - our offer" },
+            { image: janosik3, alt: "Janosik website - certificates" },
+            { image: janosik4, alt: "Janosik website - our offer page" },
+            { image: janosik5, alt: "Janosik website - certificates page" }
+        ],
+        year: 2024,
+        role: "WordPress Developer",
+        isFeatured: false,
+        links: {
+            websiteLink: "https://janosikrzeszow.pl/oferta-autokary/"
         }
     },
 ]
