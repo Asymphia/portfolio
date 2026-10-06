@@ -2,6 +2,7 @@ import { Project } from "@/lib/projects"
 import Link from "next/link"
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline"
 import Tag from "../ui/tag"
+import RollingText from "@/components/ui/rolling-text"
 
 type DetailRow = {
     tag: string
@@ -49,12 +50,16 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
 
                             {
                                 element.href ? (
-                                    <Link href={ element.href } className="font-semibold flex items-center gap-2">
-                                        <span data-reveal="cell">
-                                            { element.value }
-                                        </span>
+                                    <Link href={ element.href } className="font-semibold transition-all hover:opacity-80 active:opacity-60" target="_blank">
+                                        <RollingText>
+                                            <div className="flex items-center gap-2">
+                                                <span data-reveal="cell">
+                                                    { element.value }
+                                                </span>
 
-                                        <ArrowUpRightIcon data-reveal="item" className="size-5 stroke-2" />
+                                                <ArrowUpRightIcon data-reveal="item" className="size-5 stroke-2" />
+                                            </div>
+                                        </RollingText>
                                     </Link>
                                 ) : (
                                     <p data-reveal="cell" className="font-semibold">

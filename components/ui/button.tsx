@@ -1,5 +1,6 @@
 import { ComponentProps, ComponentType, ReactNode } from "react"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
+import RollingText from "@/components/ui/rolling-text"
 
 interface ButtonProps {
     children: ReactNode
@@ -31,18 +32,9 @@ const Button = ({ children, style="primary", isSmaller=false, className, icon: I
         >
             { iconBeforeText && icon }
 
-            <span className="relative block overflow-hidden whitespace-nowrap">
-                <span className={`block transition-transform duration-700 ${ EASE } group-hover:-translate-y-full`}>
-                    { children }
-                </span>
-
-                <span
-                    aria-hidden
-                    className={`absolute left-0 top-full block transition-transform duration-700 ${ EASE } group-hover:-translate-y-full`}
-                >
-                    { children }
-                </span>
-            </span>
+            <RollingText>
+                { children }
+            </RollingText>
 
             { !iconBeforeText && icon }
         </button>

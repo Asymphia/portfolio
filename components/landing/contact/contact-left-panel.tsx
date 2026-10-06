@@ -2,6 +2,7 @@ import Button from "@/components/ui/button"
 import Link from "next/link"
 import ContactLinks from "@/components/landing/contact/contact-links"
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline"
+import RollingText from "@/components/ui/rolling-text";
 
 const ContactLeftPanel = () => {
     return (

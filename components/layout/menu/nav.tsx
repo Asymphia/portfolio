@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Link from "next/link"
+import RollingText from "@/components/ui/rolling-text"
 
 const Nav = () => {
     const links = [
@@ -11,8 +12,10 @@ const Nav = () => {
         <nav className="space-x-7 bg-background py-px px-2">
             {
                 links.map(link => (
-                    <Link key={ link.title } href={ link.href } className="text-black">
-                        { link.title }
+                    <Link key={ link.title } href={ link.href } className="text-black transition-all hover:opacity-80 active:opacity-60">
+                        <RollingText>
+                            { link.title }
+                        </RollingText>
                     </Link>
                 ))
             }
