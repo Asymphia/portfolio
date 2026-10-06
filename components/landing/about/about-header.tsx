@@ -9,14 +9,20 @@ const AboutHeader = () => {
                 About me
             </AccentText>
 
-            <h2 data-about-text className="text-5xl/14 text-grey-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus, mauris et pharetra porta,
-                ligula purus laoreet massa, sed tincidunt lectus nisl vel orci.
-                Nam dapibus urna accumsan, facilisis libero nec, malesuada elit. Aenean sodales tortor et
-                scelerisque sagittis. Nunc pellentesque dapibus est. Praesent hendrerit risus sed semper varius.
-            </h2>
+            <div>
+                <Image
+                    data-about-star
+                    src={ starImage }
+                    alt="An icon of a blue star"
+                    className="relative z-10 float-right -mt-18 -mr-10 -ml-17 -mb-10"
+                />
 
-            <Image data-about-star src={ starImage } alt="An icon of a blue star" className="absolute -top-6 -right-6" />
+                <h2 data-about-text className="text-5xl/14 text-grey-500 text-pretty">
+                    Hey, I'm Julia! I spend most of my time building WordPress and WooCommerce sites in Divi.
+                    Alongside that I code React and Next.js projects and do UI/UX design in Figma. I also build custom PHP
+                    themes and plugins whenever a project needs something beyond page builders.
+                </h2>
+            </div>
         </header>
     )
 }

@@ -30,7 +30,7 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
         ...(project.links?.projectRepoLink
             ? [{ tag: "Project", value: "View repo", href: project.links.projectRepoLink }]
             : []),
-        ...(project.links?.projectRepoLink
+        ...(project.links?.projectDownloadLink
             ? [{ tag: "Download", value: "Download app", href: project.links.projectDownloadLink }]
             : []),
     ]

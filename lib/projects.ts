@@ -143,8 +143,8 @@ export const projects: Project[] = [
         id: 1,
         slug: "metoda-silvy-polska",
         title: "Metoda Silvy Polska",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Clean custom design and a dedicated WordPress plugin built to easily manage course dates, lecturers, and organizers.",
+        descriptionLong: "I designed a clean, information-dense layout and built a custom WordPress plugin using PHP, ACF, Custom Post Types, and Taxonomies. The plugin gives site owners an intuitive way to manage course schedules, lecturers, and organizers, while delivering a clear, readable experience for users browsing upcoming course dates.",
         tags: ["WordPress", "Divi Builder", "Design", "WordPress Plugin", "ACF", "PHP"],
         featuredImage: silva,
         images: [
@@ -166,8 +166,8 @@ export const projects: Project[] = [
         id: 2,
         slug: "sport-res",
         title: "Sport-Res",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Dynamic sports equipment store built with WooCommerce, featuring custom JS scroll-driven animation.",
+        descriptionLong: "A WooCommerce store designed for a large sports equipment catalog. The main goal was to make the site feel energetic, with plenty of visual movement. I used a mix of Divi and custom JS to implement scroll-driven animations, creating smooth dynamic transitions across category pages, product views, and brand sections.",
         tags: ["WordPress", "Divi Builder", "WooCommerce", "Design", "Motion Design"],
         featuredImage: sportRes,
         images: [
@@ -186,9 +186,9 @@ export const projects: Project[] = [
         id: 3,
         slug: "omega-rental",
         title: "Omega Rental",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
-        tags: ["WordPress", "Divi Builder", "WooCommerce", "ACF", "Design"],
+        descriptionShort: "WooCommerce rental and sales store with custom ACF fields and PHP templates for structured, detailed product specs.",
+        descriptionLong: "The client wanted both equipment rental and sales listings to look and feel like OtoMoto, with detailed technical parameter sheets. To achieve this, I used ACF to add extensive custom fields to WooCommerce products and wrote custom PHP to display all the specs, parameters, and pricing options in a clean, structured layout.",
+        tags: ["WordPress", "Divi Builder", "WooCommerce", "ACF", "PHP", "Design"],
         featuredImage: omega,
         images: [
             { image: omega1, alt: "Omega Rental website -  hero" },
@@ -205,11 +205,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 3,
+        id: 4,
         slug: "matdev-pm",
         title: "MatDev PM",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "A simple desktop app for tracking tasks and budgets, built for a university project using Electron and Next.js.",
+        descriptionLong: "A simple desktop app built as a university project for basic task and budget management. Working in a 7-person team, I handled the frontend using Next.js, Tailwind, and GSAP alongside another dev who was new to frontend work. We turned the Figma layouts into a working desktop interface connected to a .NET backend.",
         tags: ["Next.js", "GSAP", "Electron", "Tailwind"],
         featuredImage: matdev,
         images: [
@@ -231,12 +231,12 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 4,
+        id: 5,
         slug: "scribre",
         title: "Scribre",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
-        tags: ["Next.js", "TypeScript", "Design"],
+        descriptionShort: "In-progress note-taking app built with Next.js and Lucia Auth, featuring folder structures and rich Markdown support.",
+        descriptionLong: "A personal note-taking app currently in progress. I designed the UI and built the frontend using Next.js, TypeScript, and Lucia Auth for user authentication. It features a clean folder-based structure for organizing notes, along with an editor that supports Markdown, LaTeX math equations, Mermaid diagrams, and embedded images.",
+        tags: ["Next.js", "TypeScript", "Lucia Auth", "Design"],
         featuredImage: scribre,
         images: [
             { image: scribre1, alt: "Scribre website -  login" },
@@ -257,33 +257,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 5,
-        slug: "postcards-never-sent",
-        title: "Postcards never sent",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
-        tags: ["Next.js", "TypeScript", "GSAP", "Design"],
-        featuredImage: postcards,
-        images: [
-            { image: postcards1, alt: "Postcards never sent website -  hero" },
-            { image: postcards2, alt: "Postcards never sent website - creating postcard" },
-            { image: postcards3, alt: "Postcards never sent website - selecting stamp" },
-            { image: postcards4, alt: "Postcards never sent website - success modal" }
-        ],
-        year: 2026,
-        role: "Front-end developer & UI/UX designer",
-        isFeatured: false,
-        links: {
-            websiteLink: "https://postcards-never-sent.vercel.app/",
-            projectRepoLink: "https://github.com/Asymphia/postcards-never-sent"
-        }
-    },
-    {
         id: 6,
         slug: "tqm-soft",
         title: "TQM Soft",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Custom WP theme developed in a team using Roots Sage, SCSS, and WooCommerce, built directly from Figma designs.",
+        descriptionLong: "A team project built at work using Roots Sage, SCSS, WooCommerce, and ACF. Working from Figma designs, I focused on the frontend development, building clean, responsive layouts. I also handled basic WordPress content setup, such as structuring articles and knowledge base sections across the custom theme.",
         tags: ["WordPress", "Roots Sage", "Custom Theme", "SCSS", "PHP", "WooCommerce"],
         featuredImage: tqmSoft,
         images: [
@@ -294,7 +272,7 @@ export const projects: Project[] = [
             { image: tqmSoft5, alt: "TQM Soft website - qnowhow" },
             { image: tqmSoft6, alt: "TQM Soft website - about us" },
         ],
-        year: 2025,
+        year: 2026,
         role: "Front-end Developer",
         isFeatured: true
     },
@@ -302,8 +280,8 @@ export const projects: Project[] = [
         id: 7,
         slug: "qlio",
         title: "QLIO",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Promotional WP landing page for a venue rental management panel, with subtle motion design and clear feature specs.",
+        descriptionLong: "A landing page built to promote a management panel for hourly-rental venue owners. The client wanted to present all system features clearly without cluttering the page. I designed and built the site in Divi, keeping the layout clean and using subtle animations across sections without overdoing the motion.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: qlio,
         images: [
@@ -324,8 +302,8 @@ export const projects: Project[] = [
         id: 8,
         slug: "rehab-pro",
         title: "Rehab-Pro",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Multi-page WordPress site for a rehabilitation center, organizing extensive service lists into clear, structured layouts.",
+        descriptionLong: "A multi-page site built for a progressive rehabilitation center with a large service offering, overing rehab methods, medical training, diagnostics, and beauty treatments. To handle the high volume of information, I structured the content across dedicated subpages, keeping the Divi layouts clean, readable, and easy to navigate.",
         tags: ["WordPress", "Divi Builder", "Design"],
         featuredImage: rehab,
         images: [
@@ -345,10 +323,32 @@ export const projects: Project[] = [
     },
     {
         id: 9,
+        slug: "postcards-never-sent",
+        title: "Postcards never sent",
+        descriptionShort: "Interactive Next.js app for writing and reading anonymous postcards, built with PostgreSQL and GSAP animations.",
+        descriptionLong: "My first project built with Next.js, designed as a simple platform for sharing anonymous postcards and unsent messages. I built it to get hands-on experience with Next.js Server Actions for saving and fetching data with a PostgreSQL database, while integrating GSAP animations for interactive postcard creation and UI transitions.",
+        tags: ["Next.js", "TypeScript", "GSAP", "Design"],
+        featuredImage: postcards,
+        images: [
+            { image: postcards1, alt: "Postcards never sent website -  hero" },
+            { image: postcards2, alt: "Postcards never sent website - creating postcard" },
+            { image: postcards3, alt: "Postcards never sent website - selecting stamp" },
+            { image: postcards4, alt: "Postcards never sent website - success modal" }
+        ],
+        year: 2026,
+        role: "Front-end developer & UI/UX designer",
+        isFeatured: false,
+        links: {
+            websiteLink: "https://postcards-never-sent.vercel.app/",
+            projectRepoLink: "https://github.com/Asymphia/postcards-never-sent",
+        }
+    },
+    {
+        id: 10,
         slug: "pasieka-stefanek",
         title: "Pasieka Stefanek",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Simple WooCommerce store for a local honey farm, featuring product variants and a mix of graphics and photos.",
+        descriptionLong: "A simple WooCommerce store built for a local apiary to sell honey products online. The design blends custom graphics with product photography for a clean layout. I built the site using Divi, configuring WooCommerce to handle product variants and setting up a straightforward shopping flow for customers.",
         tags: ["WordPress", "Divi Builder", "Design", "WooCommerce"],
         featuredImage: pasieka,
         images: [
@@ -366,11 +366,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 10,
+        id: 11,
         slug: "ewa-rozanska",
         title: "Ewa Różańska",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "WP site migration to Divi featuring a custom React and Tailwind plugin for mortgage and refinancing calculators.",
+        descriptionLong: "I migrated an old, plugin-heavy WordPress site into a clean Divi build and later added a WooCommerce store for selling online courses. A core feature was developing a custom plugin with two mortgage calculators (overpayment and refinancing). Built with React and Tailwind wrapped in minimal PHP, refining the UX through multiple rounds of testing with the client.",
         tags: ["WordPress", "Divi Builder", "WooCommerce", "WordPress Plugin", "PHP", "React"],
         featuredImage: rozanska,
         images: [
@@ -393,11 +393,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 11,
+        id: 12,
         slug: "musicshare",
         title: "MusicShare",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "A Spotify-connected React app for viewing personal music stats, managing playlists, and discovering recommendations.",
+        descriptionLong: "A web app integrated with Spotify for tracking personal listening stats, managing playlists, and finding track recommendations. Working alongside a backend developer who built a .NET API, I designed the user interface and built the frontend using React and Tailwind CSS, focusing on a clean, functional music dashboard.",
         tags: ["React", "TypeScript", "Design", "Spotify"],
         featuredImage: musicshare,
         year: 2025,
@@ -408,11 +408,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 12,
+        id: 13,
         slug: "in-love",
         title: "In Love",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "A minimalist WP landing page for a bridal dress studio, combining subtle motion design with clean collection galleries.",
+        descriptionLong: "To replace an overly complex site structure, we focused on a clean single-page landing layout for this bridal dress studio. I built the site in Divi, using subtle animations to keep the design lightweight. Detailed photo galleries for each dress collection were kept separate to give visitors a clear view of the garments.",
         tags: ["WordPress", "Divi Builder", "Design", "Motion Design"],
         featuredImage: inLove,
         images: [
@@ -429,11 +429,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 13,
+        id: 14,
         slug: "sluja",
         title: "Konstrukcje Stalowe Słuja",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "Multilingual WP site for a steel construction company, with a custom hero video and visual service showcase.",
+        descriptionLong: "A multilingual WordPress site built in Divi for a steel construction company. The client wanted a dynamic entry, so I edited a custom hero video for the homepage. I also focused on highlighting their projects and services with clear descriptions, structured photo galleries, and multi-language support for international clients.",
         tags: ["WordPress", "Divi Builder", "Design"],
         featuredImage: sluja,
         images: [
@@ -452,11 +452,11 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 14,
+        id: 15,
         slug: "janosik",
         title: "Janosik",
-        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
-        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        descriptionShort: "WordPress site for a coach transport company, featuring vehicle specs, route maps, gallery, and a quote request form.",
+        descriptionLong: "A WordPress site built in Divi for a transport and coach rental service. To highlight their operations, I integrated interactive route maps displaying kilometers driven across 2024. The site also features a structured fleet offer with detailed vehicle specs, a photo gallery, and a custom contact form for rental quotes.",
         tags: ["WordPress", "Divi Builder", "Design"],
         featuredImage: janosik,
         images: [

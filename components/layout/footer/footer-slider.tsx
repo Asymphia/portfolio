@@ -18,11 +18,11 @@ const FooterSlider = () => {
 
                         <p>
                             <span className="block">
-                                Lorem ipsum dotor sit amet?
+                                Always happy to connect
                             </span>
 
                             <span className="block">
-                                Consectetur adipiscing elit
+                                Open to new opportunities
                             </span>
                         </p>
                     </div>

@@ -18,7 +18,7 @@ import corgi from "@/assets/projects/corgi.png"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
-const words = ["Lorem ipsum", "Dolor sit", "Amet elit"]
+const words = ["Concept", "Build", "Ship"]
 
 const photos = [tqmSoft, inLove, qlio, rehab, omega, sportRes, pasieka, corgi]
 const TILTS = [-18, 12, -8, 22, -14, 9, -22, 15]
@@ -166,7 +166,7 @@ const CircleSection = () => {
 
                 <div data-content className="invisible relative z-10 flex flex-col items-center space-y-1">
                     <AccentText className="text-grey-300!">
-                        Lorem ipsum
+                        Workflow
                     </AccentText>
 
                     <h2 className="grid text-5xl leading-[1.15] text-white md:text-8xl">

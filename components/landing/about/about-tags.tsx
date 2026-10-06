@@ -4,15 +4,13 @@ import Tag from "@/components/ui/tag"
 
 const AboutTags = () => {
     const tags = [
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum",
-        "Lorem ipsum"
+        "WordPress Websites",
+        "E-commerce Websites",
+        "Custom WordPress Themes",
+        "Custom WordPress Plugins",
+        "Front-End Development",
+        "UI/UX Design",
+        "SEO & Copywriting"
     ]
 
     return (
@@ -21,7 +19,7 @@ const AboutTags = () => {
 
             <div className="space-y-4">
                 <p className="text-black text-sm">
-                    [ Lorem ipsum ]
+                    [ My fields of interest ]
                 </p>
 
                 <div className="flex flex-wrap gap-3">
