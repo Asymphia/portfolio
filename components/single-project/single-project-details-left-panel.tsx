@@ -5,7 +5,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline"
 import PanelReveal from "@/components/single-project/panel-reveal"
 
 const SingleProjectDetailLeftPanel = ({ project }: { project: Project }) => {
-    const nextProjectSlug = projects.filter(item => item.id === project.id + 1)[0].slug
+    const nextProjectSlug = projects.filter(item => item.id === project.id + 1)[0]?.slug
 
     return (
         <PanelReveal className="space-y-15 sticky top-28 self-start h-fit">
@@ -26,7 +26,7 @@ const SingleProjectDetailLeftPanel = ({ project }: { project: Project }) => {
                     All projects
                 </Button>
 
-                <Button href={`/projects/${ nextProjectSlug }`}>
+                <Button href={`/projects/${ nextProjectSlug }`} disabled={ !nextProjectSlug }>
                     Next project
                 </Button>
             </div>

@@ -11,11 +11,12 @@ interface ButtonProps {
     icon?: ComponentType<ComponentProps<'svg'>>
     iconBeforeText?: boolean
     href?: string
+    disabled?: boolean
 }
 
 const EASE = "ease-[cubic-bezier(0.16,1,0.3,1)]"
 
-const Button = ({ children, style="primary", isSmaller=false, className="", icon: Icon=ArrowRightIcon, iconBeforeText=false, href }: ButtonProps) => {
+const Button = ({ children, style="primary", isSmaller=false, className="", icon: Icon=ArrowRightIcon, iconBeforeText=false, href, disabled=false }: ButtonProps) => {
     const classes = `group border border-black rounded-sm flex items-center cursor-pointer w-fit
         transition-[background-color,scale] duration-500 ${ EASE } active:scale-[0.97]
         ${ style === "primary" ? "bg-black text-white hover:bg-black/80" : "bg-background text-black hover:bg-grey-300" }
@@ -44,14 +45,14 @@ const Button = ({ children, style="primary", isSmaller=false, className="", icon
 
     if (href) {
         return (
-            <Link href={ href } className={ classes }>
+            <Link href={ href } className={ classes + `${ disabled ? "pointer-events-none opacity-50!" : "" }` }>
                 { content }
             </Link>
         )
     }
 
     return (
-        <button className={ classes }>
+        <button className={ classes + `${ disabled ? "pointer-events-none opacity-50!" : "" }` } disabled={ disabled }>
             { content }
         </button>
     )
