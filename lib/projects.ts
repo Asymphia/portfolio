@@ -11,6 +11,14 @@ import pasieka from "@/assets/projects/pasieka.png"
 import rozanska from "@/assets/projects/rozanska.png"
 import inLove from "@/assets/projects/in-love.png"
 import inLoveWide from "@/assets/projects/in-love-wide.png"
+import musicshare from "@/assets/projects/musicshare.png"
+import postcards from "@/assets/projects/postcards.png"
+import scribre from "@/assets/projects/scribre.png"
+
+export type ProjectImage = {
+    image: StaticImageData
+    alt: string
+}
 
 export type Project = {
     id: number
@@ -21,7 +29,7 @@ export type Project = {
     tags: string[]
     featuredImage: StaticImageData
     featuredImageWide?: StaticImageData
-    images?: StaticImageData[]
+    images?: ProjectImage[]
     year: number
     role: string
     isFeatured: boolean
@@ -41,11 +49,13 @@ export const projects: Project[] = [
         descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
         tags: ["WordPress", "Divi Builder", "Design", "Custom WordPress Plugin", "ACF", "PHP"],
         featuredImage: silva,
+        images: [{ image: silva, alt: "Metoda Silvy Polska website" }],
         year: 2026,
         role: "WordPress Developer",
         isFeatured: true,
         links: {
-            websiteLink: "https://metodasilvypolska.pl"
+            websiteLink: "https://metodasilvypolska.pl",
+            pluginRepoLink: "https://github.com/Asymphia/wp-courses-manager"
         }
     },
     {
@@ -77,6 +87,37 @@ export const projects: Project[] = [
     },
     {
         id: 4,
+        slug: "scribre",
+        title: "Scribre",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["Next.js", "TypeScript", "Design"],
+        featuredImage: scribre,
+        year: 2026,
+        role: "Front-end developer & UI/UX designer",
+        isFeatured: false,
+        links: {
+            projectRepoLink: "https://github.com/Asymphia/scribre"
+        }
+    },
+    {
+        id: 5,
+        slug: "postcards-never-sent",
+        title: "Postcards never sent",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["Next.js", "TypeScript", "GSAP", "Design"],
+        featuredImage: postcards,
+        year: 2026,
+        role: "Front-end developer & UI/UX designer",
+        isFeatured: false,
+        links: {
+            websiteLink: "https://postcards-never-sent.vercel.app/",
+            projectRepoLink: "https://github.com/Asymphia/postcards-never-sent"
+        }
+    },
+    {
+        id: 6,
         slug: "tqm-soft",
         title: "TQM Soft",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
@@ -88,7 +129,7 @@ export const projects: Project[] = [
         isFeatured: true
     },
     {
-        id: 5,
+        id: 7,
         slug: "qlio",
         title: "QLIO",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
@@ -104,7 +145,7 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 6,
+        id: 8,
         slug: "rehab-pro",
         title: "Rehab-Pro",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
@@ -119,7 +160,7 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 7,
+        id: 9,
         slug: "stefanek-apairy",
         title: "Stefanek Apairy",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
@@ -134,7 +175,7 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 8,
+        id: 10,
         slug: "ewa-rozanska",
         title: "Ewa Różańska",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
@@ -150,7 +191,22 @@ export const projects: Project[] = [
         }
     },
     {
-        id: 9,
+        id: 11,
+        slug: "musicshare",
+        title: "MusicShare",
+        descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
+        descriptionLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat. Donec odio tortor, aliquet sit amet tristique in, molestie eget quam. Donec vehicula arcu nulla, semper facilisis sapien imperdiet ut. Praesent condimentum eros risus, quis dapibus mauris porttitor at. Integer sit amet magna arcu.",
+        tags: ["React", "TypeScript", "Design", "Spotify"],
+        featuredImage: musicshare,
+        year: 2025,
+        role: "React Developer & UI/UX Designer",
+        isFeatured: false,
+        links: {
+            projectRepoLink: "https://github.com/Asymphia/MusicShare"
+        }
+    },
+    {
+        id: 12,
         slug: "in-love",
         title: "In Love Wedding Dresses",
         descriptionShort: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non libero ornare, tristique sapien nec, ullamcorper erat.",
