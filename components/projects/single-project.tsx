@@ -6,7 +6,7 @@ import RollingText from "@/components/ui/rolling-text";
 
 const SingleProject = ({ item, className }: { item: Project, className?: string }) => {
     return (
-        <Link href={`/projects/${ item.slug}`} data-project className={`space-y-6 ${ className } group`}>
+        <Link href={`/projects/${ item.slug}`} data-project className={`space-y-6 ${ className } group`} data-cursor="view project">
             <Image
                 src={ item.featuredImage }
                 alt={`${item.title}'s page`}

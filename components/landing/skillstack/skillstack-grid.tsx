@@ -188,6 +188,8 @@ const SkillstackGrid = () => {
                     <div
                         key={ item.alt }
                         data-tile={ index }
+                        data-cursor="grab"
+                        data-cursor-down="grabbing"
                         ref={ el => { if (el) tilesRef.current[index] = el } }
                         className="tile group flex aspect-square w-full items-center justify-center rounded-sm bg-grey-300 transition-[opacity,background-color] duration-500 ease-out hover:bg-white"
                     >

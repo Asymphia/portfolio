@@ -3,6 +3,7 @@ import "./globals.css"
 import { AlbertSansFont, InterFont } from "@/lib/fonts"
 import Footer from "@/components/layout/footer/footer"
 import Menu from "@/components/layout/menu/menu"
+import Cursor from "@/components/layout/coursor"
 
 export const metadata: Metadata = {
     title: "Julia Kawa",
@@ -20,6 +21,8 @@ const RootLayout = ({ children }: LayoutProps<"/">) => {
 
                     <Footer />
                 </div>
+
+                <Cursor />
             </body>
         </html>
     )
