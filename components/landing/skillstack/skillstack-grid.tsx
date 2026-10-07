@@ -4,16 +4,16 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import Image from "next/image"
 
-import figma from "@/assets/logos/figma.png"
-import gsapLogo from "@/assets/logos/gsap.png"
-import react from "@/assets/logos/react.png"
-import next from "@/assets/logos/next.png"
-import typescript from "@/assets/logos/typescript.png"
-import tailwind from "@/assets/logos/tailwind.png"
-import wordpress from "@/assets/logos/wordpress.png"
-import rootsSage from "@/assets/logos/roots-sage.png"
-import acf from "@/assets/logos/acf.png"
-import php from "@/assets/logos/php.png"
+import figma from "@/assets/logos/figma.svg"
+import gsapLogo from "@/assets/logos/gsap.svg"
+import react from "@/assets/logos/react.svg"
+import next from "@/assets/logos/next.svg"
+import typescript from "@/assets/logos/typescript.svg"
+import tailwind from "@/assets/logos/tailwind.svg"
+import wordpress from "@/assets/logos/wordpress.svg"
+import rootsSage from "@/assets/logos/roots-sage.svg"
+import acf from "@/assets/logos/acf.svg"
+import php from "@/assets/logos/php.svg"
 
 const skillstackItems = [
     { icon: figma, alt: "Figma's logo" },
@@ -194,8 +194,10 @@ const SkillstackGrid = () => {
                         <Image
                             src={ item.icon }
                             alt={ item.alt }
+                            quality={ 100 }
+                            sizes="10vw"
                             draggable={ false }
-                            className="pointer-events-none transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
+                            className="pointer-events-none will-change-transform transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
                         />
                     </div>
                 ))
