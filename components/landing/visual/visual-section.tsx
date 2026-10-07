@@ -158,6 +158,7 @@ const VisualSection = () => {
                                     src={ project.image }
                                     alt={`Screenshot of ${ project.title }'s website`}
                                     fill
+                                    quality={ 100 }
                                     sizes="(min-width: 1024px) 60rem, 100vw"
                                     priority={ index === 0 }
                                     draggable={ false }
