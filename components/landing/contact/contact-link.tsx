@@ -10,6 +10,7 @@ const ContactLink = ({ text, href, isFirst=false }: { text: string, href: string
                 transition-all ease-[cubic-bezier(0.16,1,0.3,1)] duration-500 hover:bg-black hover:text-white hover:px-2 active:bg-black/80
                 ${ isFirst ? "border-y" : "border-b" }`}
             target="_blank"
+            rel="noopener noreferrer"
         >
             <RollingText>
                 { text }

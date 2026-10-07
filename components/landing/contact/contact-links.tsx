@@ -1,9 +1,8 @@
 import ContactLink from "@/components/landing/contact/contact-link"
 
 const links = [
-    { title: "LinkedIn", link: "#" },
-    { title: "GitHub", link: "#" },
-    { title: "Dribble", link: "#" }
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/julia-kawa-a88809435" },
+    { title: "GitHub", link: "https://github.com/Asymphia" }
 ]
 
 const ContactLinks = () => {

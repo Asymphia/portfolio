@@ -13,13 +13,17 @@ const ContactLeftPanel = () => {
                     or grab my resume. I reply within two working days.
                 </p>
 
-                <Button icon={ ArrowDownTrayIcon }>
+                <Button icon={ ArrowDownTrayIcon } href="/Julia-Kawa_CV.pdf" target="_blank">
                     Download resume
                 </Button>
             </div>
 
-            <Link href="#" className="block text-black text-2xl underline underline-offset-4">
-                hello@juliakawa.dev
+            <Link href="mailto:hello@juliakawa.dev" className="block text-black text-2xl transition-all hover:opacity-80 active:opacity-60">
+                <RollingText>
+                    <span className="underline underline-offset-4">
+                        hello@juliakawa.dev
+                    </span>
+                </RollingText>
             </Link>
 
             <ContactLinks />
