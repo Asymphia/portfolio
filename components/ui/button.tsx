@@ -14,11 +14,12 @@ interface ButtonProps {
     disabled?: boolean
     target?: "_blank" | "_self"
     download?: boolean
+    type?: "button" | "submit"
 }
 
 const EASE = "ease-[cubic-bezier(0.16,1,0.3,1)]"
 
-const Button = ({ children, style="primary", isSmaller=false, className="", icon: Icon=ArrowRightIcon, iconBeforeText=false, href, disabled=false, target, download=false }: ButtonProps) => {
+const Button = ({ children, style="primary", isSmaller=false, className="", icon: Icon=ArrowRightIcon, iconBeforeText=false, href, disabled=false, target, download=false, type="button" }: ButtonProps) => {
     const classes = `group border border-black rounded-sm flex items-center cursor-pointer w-fit
         transition-[background-color,scale] duration-500 ${ EASE } active:scale-[0.97]
         ${ style === "primary" ? "bg-black text-white hover:bg-black/80" : "bg-background text-black hover:bg-grey-300" }
@@ -63,7 +64,7 @@ const Button = ({ children, style="primary", isSmaller=false, className="", icon
     }
 
     return (
-        <button className={ classes + `${ disabled ? "pointer-events-none opacity-50" : "" }` } disabled={ disabled }>
+        <button type={ type } className={ classes + `${ disabled ? "pointer-events-none opacity-50" : "" }` } disabled={ disabled }>
             { content }
         </button>
     )

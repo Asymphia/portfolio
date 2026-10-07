@@ -1,16 +1,35 @@
+"use client"
+
 import Input from "@/components/ui/input"
 import Select from "@/components/ui/select"
 import Textarea from "@/components/ui/textarea"
-import Button from "@/components/ui/button"
+import SubmitButton from "@/components/landing/contact/submit-button"
+import { useActionState, useEffect, useRef } from "react"
+import { submitContact } from "@/actions/contact"
+import { initialContactState, ROLES } from "@/lib/contact"
 
 const ContactForm = () => {
+    const [state, action] = useActionState(submitContact, initialContactState)
+    const formRef = useRef<HTMLFormElement>(null)
+    const { errors, values } = state
+
+    useEffect(() => {
+        if (state.status !== "error") {
+            return
+        }
+
+        formRef.current?.querySelector<HTMLElement>("[aria-invalid='true']")?.focus()
+    }, [state])
+
     return (
-        <form className="grid grid-cols-2 gap-5">
+        <form className="grid grid-cols-2 gap-5" ref={ formRef } action={ action } noValidate>
             <Input
                 name="name"
                 type="text"
                 placeholder="Jan Kowalski"
                 label="Name"
+                defaultValue={ values.name }
+                error={ errors.name }
             />
 
             <Input
@@ -18,6 +37,8 @@ const ContactForm = () => {
                 type="email"
                 placeholder="jan@company.com"
                 label="E-mail"
+                defaultValue={ values.email }
+                error={ errors.email }
             />
 
             <Input
@@ -25,6 +46,8 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Company"
                 label="Company name"
+                defaultValue={ values.company }
+                error={ errors.company }
             />
 
             <Input
@@ -33,13 +56,17 @@ const ContactForm = () => {
                 placeholder="https://company.com"
                 label="Link to the offer"
                 required={ false }
+                defaultValue={ values.link }
+                error={ errors.link }
             />
 
             <Select
                 name="role"
                 label="Which role?"
                 className="col-span-2"
-                options={["WordPress Page Builder", "Advanced WordPress", "React / Next.js", "UI/UX Designer", "Internship", "Other"]}
+                options={ ROLES }
+                defaultValue={ values.role }
+                error={ errors.role }
             />
 
             <Textarea
@@ -48,11 +75,17 @@ const ContactForm = () => {
                 className="col-span-2"
                 placeholder="The role, the team, the stack and how the hiring process works."
                 required={ false }
+                defaultValue={ values.message }
+                error={ errors.message }
             />
 
-            <Button className="col-span-2 ml-auto">
-                Send message
-            </Button>
+            <div className="col-span-2 flex items-center justify-between gap-6">
+                <p className="text-sm">
+                    { state.status === "success" && state.message }
+                </p>
+
+                <SubmitButton />
+            </div>
         </form>
     )
 }

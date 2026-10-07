@@ -7,6 +7,8 @@
 
     --primary: #559dca;
 
+    --error: #B83B3A;
+
     --black: #000;
     --white: #fff;
 
@@ -22,6 +24,8 @@
     --color-background: var(--background);
 
     --color-primary: var(--primary);
+
+    --color-error: var(--error);
 
     --color-black: var(--black);
     --color-white: var(--white);
