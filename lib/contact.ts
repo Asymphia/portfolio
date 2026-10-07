@@ -42,7 +42,7 @@ export const initialContactState: ContactState = {
 }
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const MAX_MESSAGE = 2000
+export const MAX_MESSAGE = 500
 
 const text = (data: FormData, key: string) => {
     const value = data.get(key)
