@@ -95,6 +95,9 @@ import matdev7 from "@/assets/projects-screenshots/matdev/matdev7.png"
 import matdev8 from "@/assets/projects-screenshots/matdev/matdev8.png"
 
 import musicshare from "@/assets/projects/musicshare.png"
+import musicshare1 from "@/assets/projects-screenshots/musicshare/musicshare1.png"
+import musicshare2 from "@/assets/projects-screenshots/musicshare/musicshare2.png"
+import musicshare3 from "@/assets/projects-screenshots/musicshare/musicshare3.png"
 
 import postcards from "@/assets/projects/postcards.png"
 import postcards1 from "@/assets/projects-screenshots/postcards/postcards1.png"
@@ -400,6 +403,11 @@ export const projects: Project[] = [
         descriptionLong: "A web app integrated with Spotify for tracking personal listening stats, managing playlists, and finding track recommendations. Working alongside a backend developer who built a .NET API, I designed the user interface and built the frontend using React and Tailwind CSS, focusing on a clean, functional music dashboard.",
         tags: ["React", "TypeScript", "Design", "Spotify"],
         featuredImage: musicshare,
+        images: [
+            { image: musicshare1, alt: "MusicShare website -  login" },
+            { image: musicshare2, alt: "MusicShare website - dashboard" },
+            { image: musicshare3, alt: "MusicShare website - mobile" },
+        ],
         year: 2025,
         role: "React Developer & UI/UX Designer",
         isFeatured: false,
