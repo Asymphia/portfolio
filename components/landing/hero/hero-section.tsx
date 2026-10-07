@@ -124,11 +124,11 @@ const HeroSection = () => {
             </p>
 
             <div ref={ ctaRef } className="invisible flex gap-6">
-                <Button style="secondary" icon={ PaperAirplaneIcon }>
+                <Button style="secondary" icon={ PaperAirplaneIcon } href="#contact">
                     Get in touch
                 </Button>
 
-                <Button style="primary">
+                <Button style="primary" href="/projects">
                     Discover more
                 </Button>
             </div>
