@@ -1,4 +1,4 @@
-import tqmSoft from "@/assets/projects/tqm-soft.png"
+import aboutImg from "@/assets/about-image.jpg"
 import Image from "next/image"
 import Tag from "@/components/ui/tag"
 
@@ -15,7 +15,7 @@ const AboutTags = () => {
 
     return (
         <div className="flex gap-12 items-center">
-            <Image src={ tqmSoft } alt="Screenshot of a TQM Soft's website" className="max-w-71" />
+            <Image src={ aboutImg } alt="Screenshot of a TQM Soft's website" className="max-w-71" />
 
             <div className="space-y-4">
                 <p className="text-black text-sm">

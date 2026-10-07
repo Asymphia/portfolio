@@ -5,7 +5,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
-import tqmSoft from "@/assets/projects/tqm-soft.png"
+import heroImg from "@/assets/hero-image.jpg"
 import Button from "@/components/ui/button"
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 
@@ -109,8 +109,8 @@ const HeroSection = () => {
 
                 <span ref={ frameRef } className="mx-4 flex justify-center overflow-hidden rounded-sm">
                     <Image
-                        src={ tqmSoft }
-                        alt="Screenshot of a TQM Soft's website"
+                        src={ heroImg }
+                        alt="Computer workstation"
                         priority
                         className="max-w-62 shrink-0"
                     />

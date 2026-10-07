@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import tqmSoft from "@/assets/projects/tqm-soft.png"
+import heroImg from "@/assets/hero-image-projects.jpg"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -83,10 +83,10 @@ const ProjectsHero = () => {
 
             <span ref={ frameRef } className="mx-4 flex justify-center overflow-hidden rounded-sm">
                 <Image
-                    src={ tqmSoft }
-                    alt="Screenshot of a TQM Soft's website"
+                    src={ heroImg }
+                    alt="Computer workstation"
                     priority
-                    className="max-w-60 shrink-0"
+                    className="max-w-62 shrink-0"
                 />
             </span>
 
