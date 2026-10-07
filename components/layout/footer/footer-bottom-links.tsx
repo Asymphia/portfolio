@@ -23,7 +23,7 @@ const FooterBottomLinks = () => {
                 &copy; { year } All rights reserved
             </p>
 
-            <Link href="#" className="text-white ml-auto transition-all hover:opacity-80 active:opacity-60">
+            <Link href="/privacy-policy" className="text-white ml-auto transition-all hover:opacity-80 active:opacity-60">
                 <RollingText>
                     Privacy Policy
                 </RollingText>
