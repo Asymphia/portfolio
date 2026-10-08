@@ -7,14 +7,14 @@ const HOSTING_LOCATION = "Poland"
 const LAST_UPDATED = "7 October 2026"
 
 const Section = ({ title, children }: { title: string, children: ReactNode }) => (
-    <section className="space-y-4">
-        <h2 className="text-3xl">{ title }</h2>
+    <section className="space-y-3 md:space-y-4">
+        <h2 className="text-2xl md:text-3xl">{ title }</h2>
         { children }
     </section>
 )
 
 const List = ({ children }: { children: ReactNode }) => (
-    <ul className="list-disc space-y-2 pl-6">{ children }</ul>
+    <ul className="list-disc space-y-1 md:space-y-2 pl-4 md:pl-6">{ children }</ul>
 )
 
 const MailLink = () => (
@@ -27,10 +27,10 @@ const MailLink = () => (
 
 const PrivacyPolicyPage = () => {
     return (
-        <main className="container pt-40">
-            <article className="space-y-12 [&_strong]:font-medium [&_strong]:text-black">
+        <main className="container pt-28 md:pt-32 lg:pt-40">
+            <article className="space-y-10 md:space-y-12 [&_strong]:font-medium [&_strong]:text-black">
                 <header className="space-y-4">
-                    <h1 className="text-8xl text-black mb-8">Privacy Policy</h1>
+                    <h1 className="text-6xl md:text-7xl lg:text-8xl text-black mb-8">Privacy Policy</h1>
 
                     <p>
                         Last updated: { LAST_UPDATED }

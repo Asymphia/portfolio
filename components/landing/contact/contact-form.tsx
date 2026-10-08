@@ -7,6 +7,8 @@ import SubmitButton from "@/components/landing/contact/submit-button"
 import { useActionState, useEffect, useRef } from "react"
 import { submitContact } from "@/actions/contact"
 import { initialContactState, ROLES } from "@/lib/contact"
+import Link from "next/link";
+import RollingText from "@/components/ui/rolling-text";
 
 const ContactForm = () => {
     const [state, action] = useActionState(submitContact, initialContactState)
@@ -78,6 +80,18 @@ const ContactForm = () => {
                 defaultValue={ values.message }
                 error={ errors.message }
             />
+
+            <p className="col-span-2 text-sm">
+                By submitting this form, you agree to {" "}
+
+                <Link href="/privacy-policy" className="transition-all hover:opacity-80 active:opacity-60">
+                    <RollingText>
+                        <span className="underline underline-offset-2">
+                            Privacy Policy
+                        </span>
+                    </RollingText>
+                </Link>
+            </p>
 
             <div className="sm:col-span-2 flex items-center justify-between gap-6">
                 <p className="text-sm">

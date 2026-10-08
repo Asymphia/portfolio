@@ -80,7 +80,7 @@ const ProjectsHero = () => {
     return (
         <h1
             ref={ h1Ref }
-            className="invisible flex flex-col items-center justify-center pt-32 sm:pt-40 lg:pt-50 leading-[0.9] text-nowrap
+            className="invisible flex flex-col items-center justify-center pt-28 sm:pt-40 lg:pt-50 leading-[0.9] text-nowrap
                     lg:flex-row text-[min(22cqw,8rem)] lg:text-[min(12cqw,10rem)]"
         >
             <span data-split>
