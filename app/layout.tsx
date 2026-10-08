@@ -29,8 +29,8 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Julia Kawa | Front-end Developer",
         description: "I design and develop digital products with a strong focus on UX, usability, and conversion.",
-        images: ["/og-image.png"],
-    },
+        images: ["/og-image.png"]
+    }
 }
 
 const RootLayout = ({ children }: LayoutProps<"/">) => {
