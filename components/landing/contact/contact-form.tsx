@@ -81,7 +81,7 @@ const ContactForm = () => {
                 error={ errors.message }
             />
 
-            <p className="col-span-2 text-sm">
+            <p className="sm:col-span-2 text-sm">
                 By submitting this form, you agree to {" "}
 
                 <Link href="/privacy-policy" className="transition-all hover:opacity-80 active:opacity-60">
