@@ -7,7 +7,7 @@ const links = [
 
 const ContactLinks = () => {
     return (
-        <div className="space-y-3">
+        <div className="space-y-1.5 md:space-y-3">
             <p className="text-sm">
                 Find me elsewhere
             </p>

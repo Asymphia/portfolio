@@ -182,7 +182,7 @@ const SkillstackGrid = () => {
     }, [])
 
     return (
-        <div ref={ gridRef } className="relative ml-42 grid grid-cols-5 gap-8 select-none [&:hover_.tile:not(:hover)]:opacity-60">
+        <div ref={ gridRef } className="relative grid grid-cols-2 sm:grid-cols-5 gap-4 xl:gap-8 select-none lg:ml-42 [&:hover_.tile:not(:hover)]:opacity-60">
             {
                 skillstackItems.map((item, index) => (
                     <div
@@ -191,7 +191,7 @@ const SkillstackGrid = () => {
                         data-cursor="grab"
                         data-cursor-down="grabbing"
                         ref={ el => { if (el) tilesRef.current[index] = el } }
-                        className="tile group flex aspect-square w-full items-center justify-center rounded-sm bg-grey-300 transition-[opacity,background-color] duration-500 ease-out hover:bg-white"
+                        className="tile group flex aspect-square w-full items-center justify-center rounded-xs bg-grey-300 transition-[opacity,background-color] duration-500 ease-out hover:bg-white sm:rounded-sm"
                     >
                         <Image
                             src={ item.icon }
@@ -199,7 +199,7 @@ const SkillstackGrid = () => {
                             quality={ 100 }
                             sizes="10vw"
                             draggable={ false }
-                            className="pointer-events-none will-change-transform transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
+                            className="pointer-events-none h-auto max-h-[60%] max-w-[60%] will-change-transform transition-transform duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
                         />
                     </div>
                 ))

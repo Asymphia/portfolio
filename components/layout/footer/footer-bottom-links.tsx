@@ -6,7 +6,7 @@ const FooterBottomLinks = () => {
     const year = today.getFullYear()
 
     return (
-        <div className="container grid grid-cols-3">
+        <div className="container grid grid-cols-2 md:grid-cols-3 gap-3">
             <p>
                 <span className="text-grey-500">
                     Say hi at {" "}
@@ -19,7 +19,7 @@ const FooterBottomLinks = () => {
                 </Link>
             </p>
 
-            <p className="text-white mx-auto">
+            <p className="text-white mt-4 md:mt-0 col-span-2 md:col-span-1 order-last md:order-0 mx-auto">
                 &copy; { year } All rights reserved
             </p>
 

@@ -169,7 +169,7 @@ const CircleSection = () => {
                         Workflow
                     </AccentText>
 
-                    <h2 className="grid text-5xl leading-[1.15] text-white md:text-8xl">
+                    <h2 className="grid text-6xl md:text-7xl lg:text-8xl leading-[1.15] text-white">
                         {
                             words.map(word => (
                                 <span key={ word } data-word className="invisible col-start-1 row-start-1 text-center">

@@ -22,7 +22,7 @@ const ContactForm = () => {
     }, [state])
 
     return (
-        <form className="grid grid-cols-2 gap-5" ref={ formRef } action={ action } noValidate>
+        <form className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-3 lg:gap-5" ref={ formRef } action={ action } noValidate>
             <Input
                 name="name"
                 type="text"
@@ -63,7 +63,7 @@ const ContactForm = () => {
             <Select
                 name="role"
                 label="Which role?"
-                className="col-span-2"
+                className="sm:col-span-2"
                 options={ ROLES }
                 defaultValue={ values.role }
                 error={ errors.role }
@@ -72,14 +72,14 @@ const ContactForm = () => {
             <Textarea
                 label="Message"
                 name="message"
-                className="col-span-2"
+                className="sm:col-span-2"
                 placeholder="The role, the team, the stack and how the hiring process works."
                 required={ false }
                 defaultValue={ values.message }
                 error={ errors.message }
             />
 
-            <div className="col-span-2 flex items-center justify-between gap-6">
+            <div className="sm:col-span-2 flex items-center justify-between gap-6">
                 <p className="text-sm">
                     { state.status === "success" && state.message }
                 </p>

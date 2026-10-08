@@ -31,13 +31,13 @@ const Textarea = ({ name, placeholder, label, required=false, className, default
                     defaultValue={ defaultValue }
                     aria-invalid={ error ? true : undefined }
                     onChange={ e => setLength(e.target.value.length) }
-                    className="border border-grey-500 text-grey-700 placeholder:text-grey-500 rounded-xs px-4 py-3 w-full resize-none focus:outline-none
+                    className="border border-grey-500 text-grey-700 placeholder:text-grey-500 rounded-xs px-3 md:px-4 py-2.5 md:py-3 w-full resize-none focus:outline-none
                         transition-all ease-[cubic-bezier(0.16,1,0.3,1)] duration-500 hover:border-grey-700/75 focus:border-grey-700 focus:text-grey-700
                         aria-invalid:border-error! aria-invalid:text-error!"
                     rows={ 5 }
                 />
 
-                <p className={`text-sm absolute bottom-4 right-6 bg-background ${ length <= MAX_MESSAGE ? "text-grey-500" : "text-error" }`}>
+                <p className={`text-sm absolute bottom-3 md:bottom-4 right-5 md:right-6 bg-background transition-all ${ length <= MAX_MESSAGE ? "text-grey-500" : "text-error" }`}>
                     { length } / { MAX_MESSAGE }
                 </p>
             </label>

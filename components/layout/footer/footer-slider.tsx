@@ -7,17 +7,17 @@ const FooterSlider = () => {
         <Marquee gap="1.5rem">
             {
                 [0, 1, 2, 3, 4, 5].map(element => (
-                    <div className="text-white flex shrink-0 items-center gap-4" key={ element }>
+                    <div className="text-white flex shrink-0 items-center gap-3 md:gap-4" key={ element }>
                         <Link href="#contact" className="transition-all hover:opacity-80 active:opacity-60">
                             <RollingText>
-                                <h3 className="text-white text-5xl">
+                                <h3 className="text-white text-4xl md:text-5xl">
                                     Let’s talk
                                 </h3>
                             </RollingText>
                         </Link>
 
                         <p>
-                            <span className="block">
+                            <span className="block -mb-px md:-mb-0">
                                 Always happy to connect
                             </span>
 

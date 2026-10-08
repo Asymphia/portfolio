@@ -81,7 +81,7 @@ const AboutScroll = ({ children, id="" }: { children: ReactNode, id?: string }) 
     }, [])
 
     return (
-        <div>
+        <div className="overflow-x-clip">
             <section ref={ sectionRef } id={ id }>
                 { children }
             </section>

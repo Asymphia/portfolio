@@ -9,7 +9,7 @@ const Nav = () => {
     ]
 
     return (
-        <nav className="space-x-7 bg-background py-px px-2">
+        <nav className="space-x-3 md:space-x-5 lg:space-x-7 bg-background py-px px-2">
             {
                 links.map(link => (
                     <Link key={ link.title } href={ link.href } className="text-black transition-all hover:opacity-80 active:opacity-60">

@@ -23,7 +23,7 @@ const Select = ({ label, options, name, multichoice=true, required=true, classNa
                 <Label label={ label } multichoice={ multichoice } required={ required } />
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 md:gap-3">
                 {
                     options.map(option => (
                         <label key={ option } className="cursor-pointer">
@@ -36,7 +36,7 @@ const Select = ({ label, options, name, multichoice=true, required=true, classNa
                                 className="peer sr-only"
                             />
 
-                            <span className="block rounded-xs border border-grey-500 px-4 py-2 text-grey-500 select-none
+                            <span className="block rounded-xs border border-grey-500 px-3 md:px-4 py-2 md:py-3 text-grey-500 select-none
                                 transition-[background-color,border-color,color] ease-[cubic-bezier(0.16,1,0.3,1)] duration-500
                                 hover:border-grey-700/75 peer-checked:border-black peer-checked:bg-black peer-checked:text-white
                                 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-black

@@ -103,27 +103,37 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <section ref={ sectionRef } className="container flex flex-col items-center pt-50">
-            <h1 ref={ h1Ref } className="invisible text-display-lg flex items-center mb-6">
+        <section
+            ref={ sectionRef }
+            className="container flex flex-col items-center pt-32 sm:pt-40 lg:pt-50"
+        >
+            <h1
+                ref={ h1Ref }
+                className="invisible mb-5 flex flex-col items-center leading-[0.9] text-nowrap
+                    text-[min(26cqw,10rem)] md:mb-6 lg:flex-row lg:text-[min(17cqw,15rem)]"
+            >
                 <span data-split>Julia</span>
 
-                <span ref={ frameRef } className="mx-4 flex justify-center overflow-hidden rounded-sm">
-                    <Image
-                        src={ heroImg }
-                        alt="Computer workstation"
-                        priority
-                        className="max-w-62 shrink-0"
-                    />
-                </span>
+                <span className="flex items-center lg:contents">
+                    <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
+                        <Image
+                            src={ heroImg }
+                            alt="Computer workstation"
+                            priority
+                            sizes="(min-width: 1024px) 250px, 120px"
+                            className="h-auto w-[1.03em] max-w-none shrink-0"
+                        />
+                    </span>
 
-                <span data-split>Kawa</span>
+                    <span data-split>Kawa</span>
+                </span>
             </h1>
 
-            <p ref={ pRef } className="invisible text-5xl/16 max-w-220 text-center mb-10">
+            <p ref={ pRef } className="invisible mb-8 max-w-220 text-balance text-center text-2xl/8 sm:text-3xl/10 md:text-4xl/12 lg:text-5xl/16 md:mb-10">
                 Designing and coding web interfaces from Poland [ Rzeszów ]
             </p>
 
-            <div ref={ ctaRef } className="invisible flex gap-6">
+            <div ref={ ctaRef } className="invisible flex flex-wrap justify-center gap-3 sm:gap-6">
                 <Button style="secondary" icon={ PaperAirplaneIcon } href="#contact">
                     Get in touch
                 </Button>

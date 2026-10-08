@@ -6,8 +6,8 @@ import RollingText from "@/components/ui/rolling-text";
 
 const ContactLeftPanel = () => {
     return (
-        <div className="space-y-11">
-            <div className="space-y-6">
+        <div className="space-y-9 md:space-y-11">
+            <div className="space-y-5 md:space-y-6">
                 <p>
                     I’m open to front-end developer and UI roles. Send me a few lines about the role and your team,
                     or grab my resume. I reply within two working days.
@@ -18,7 +18,7 @@ const ContactLeftPanel = () => {
                 </Button>
             </div>
 
-            <Link href="mailto:hello@juliakawa.dev" className="block text-black text-2xl transition-all hover:opacity-80 active:opacity-60">
+            <Link href="mailto:hello@juliakawa.dev" className="block text-black text-lg md:text-xl lg:text-2xl transition-all hover:opacity-80 active:opacity-60">
                 <RollingText>
                     <span className="underline underline-offset-4">
                         hello@juliakawa.dev

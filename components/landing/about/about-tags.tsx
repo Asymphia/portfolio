@@ -14,15 +14,15 @@ const AboutTags = () => {
     ]
 
     return (
-        <div className="flex gap-12 items-center">
-            <Image src={ aboutImg } alt="Screenshot of a TQM Soft's website" className="max-w-71" />
+        <div className="flex gap-6 md:gap-12 items-center">
+            <Image src={ aboutImg } alt="Screenshot of a TQM Soft's website" className="w-full hidden lg:block md:max-w-71" />
 
             <div className="space-y-4">
                 <p className="text-black text-sm">
                     [ My fields of interest ]
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3">
                     {
                         tags.map((tag, index) => (
                             <Tag key={ index } text={ tag } />

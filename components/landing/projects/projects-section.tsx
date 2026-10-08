@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     const featured = projects.filter(project => project.isFeatured)
 
     return (
-        <section className="container space-y-20">
+        <section className="container space-y-10 md:space-y-20">
             <StyledHeader
                 header="Selected works crafted with detail & purpose."
                 tag="Projects"

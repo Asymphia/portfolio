@@ -6,7 +6,7 @@ interface LabelProps {
 
 const Label = ({ label, required=true, multichoice=false }: LabelProps) => {
     return (
-        <p className="text-sm mb-2">
+        <p className="text-sm mb-1 lg:mb-2">
             { label } {" "}
 
             {

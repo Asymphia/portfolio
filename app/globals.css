@@ -72,6 +72,12 @@
         text-rendering: optimizeLegibility;
     }
 
+    @media (max-width: 768px) {
+        body {
+            font-size: .875rem;
+        }
+    }
+
     h1, h2, h3, h4, h5, h6 {
         color: var(--black);
         font-family: var(--font-albert-sans), system-ui, sans-serif;

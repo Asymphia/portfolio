@@ -14,7 +14,7 @@ const RootLayout = ({ children }: LayoutProps<"/">) => {
     return (
         <html lang="en" className={`${ AlbertSansFont.variable } ${ InterFont.variable }`}>
             <body>
-                <div className="space-y-50 relative">
+                <div className="space-y-32 md:space-y-40 lg:space-y-50 relative">
                     <Menu />
 
                     { children }
