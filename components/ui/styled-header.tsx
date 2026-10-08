@@ -24,7 +24,7 @@ const StyledHeader = ({ header, tag, addButton=false, buttonText, addText=false 
 
             {
                 addButton && (
-                    <Button>
+                    <Button href="/projects">
                         { buttonText }
                     </Button>
                 )
