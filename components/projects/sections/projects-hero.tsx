@@ -78,19 +78,28 @@ const ProjectsHero = () => {
     }, [])
 
     return (
-        <h1 ref={ h1Ref } className="invisible text-display-md flex items-center justify-center pt-50">
-            <span data-split>Ideas</span>
+        <h1
+            ref={ h1Ref }
+            className="invisible flex flex-col items-center justify-center pt-32 sm:pt-40 lg:pt-50 leading-[0.9] text-nowrap
+                    lg:flex-row text-[min(22cqw,8rem)] lg:text-[min(12cqw,10rem)]"
+        >
+            <span data-split>
+                Ideas
+            </span>
 
-            <span ref={ frameRef } className="mx-4 flex justify-center overflow-hidden rounded-sm">
+            <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
                 <Image
                     src={ heroImg }
                     alt="Computer workstation"
                     priority
-                    className="max-w-62 shrink-0"
+                    sizes="(min-width: 1024px) 250px, 120px"
+                    className="h-auto w-[1.03em] max-w-none shrink-0"
                 />
             </span>
 
-            <span data-split>made real</span>
+            <span data-split>
+                made real
+            </span>
         </h1>
     )
 }

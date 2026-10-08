@@ -110,7 +110,7 @@ const HeroSection = () => {
             <h1
                 ref={ h1Ref }
                 className="invisible mb-5 flex flex-col items-center leading-[0.9] text-nowrap
-                    text-[min(26cqw,10rem)] md:mb-6 lg:flex-row lg:text-[min(17cqw,15rem)]"
+                    md:mb-6 lg:flex-row text-[min(26cqw,10rem)] lg:text-[min(17cqw,15rem)]"
             >
                 <span data-split>Julia</span>
 

@@ -40,7 +40,7 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
             {
                 elements.map((element, i) => (
                     element.value && (
-                        <div key={ i } className="relative flex items-center justify-between py-4">
+                        <div key={ i } className="relative flex items-center justify-between py-3 md:py-4 px-px">
                             {
                                 i === 0 && <Line position="top" />
                             }
@@ -75,7 +75,7 @@ const ProjectDetailTable = ({ project }: { project: Project }) => {
                 ))
             }
 
-            <div className="relative py-4 flex flex-wrap items-center gap-3">
+            <div className="relative py-3 md:py-4 flex flex-wrap items-center gap-2 lg:gap-3">
                 <Line position="bottom" />
 
                 {

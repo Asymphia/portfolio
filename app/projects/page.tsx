@@ -4,7 +4,7 @@ import ContactSection from "@/components/landing/contact/contact-section"
 
 const ProjectsPage = () => {
     return (
-        <main className="space-y-50">
+        <main className="space-y-32 md:space-y-40 lg:space-y-50">
             <ProjectsHero />
             <ProjectsSection />
             <ContactSection />

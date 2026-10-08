@@ -8,12 +8,12 @@ const SingleProjectDetailLeftPanel = ({ project }: { project: Project }) => {
     const nextProjectSlug = projects.filter(item => item.id === project.id + 1)[0]?.slug
 
     return (
-        <PanelReveal className="space-y-15 sticky top-28 self-start h-fit">
-            <h1 data-reveal="title" className="text-8xl">
+        <PanelReveal className="space-y-13 md:space-y-15 lg:sticky lg:top-28 self-start h-fit">
+            <h1 data-reveal="title" className="text-6xl md:text-7xl xl:text-8xl">
                 { project.title }
             </h1>
 
-            <div className="space-y-7">
+            <div className="space-y-5 md:space-y-7">
                 <ProjectDetailTable project={ project } />
 
                 <p data-reveal="text">
@@ -21,7 +21,7 @@ const SingleProjectDetailLeftPanel = ({ project }: { project: Project }) => {
                 </p>
             </div>
 
-            <div data-reveal="cta" className="flex items-center justify-between">
+            <div data-reveal="cta" className="flex items-center justify-between gap-2">
                 <Button style="secondary" icon={ ArrowLeftIcon } iconBeforeText={ true } href="/projects">
                     All projects
                 </Button>

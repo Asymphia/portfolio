@@ -19,6 +19,8 @@ const projects = [
     { image: corgi, title: "Corgi" }
 ]
 
+
+
 const RATIO = projects[0].image.width / projects[0].image.height
 
 const SCROLL_LENGTH = 3
@@ -26,10 +28,12 @@ const STEP = 1
 const HOLD = 0.35
 const OUT_TILT = 12
 const LOOPS = 1.5
+const EXIT_MARGIN = 0.2
 const TEXT_SIZE = "clamp(6rem, 17vw, 15rem)"
+const TOP_SPACE = "clamp(4.5rem, 12svh, 8rem)"
+const LABEL_SPACE = "2.5rem"
 const OVERLAP = 0.3
 const CLIP = 0.12
-const EXIT_MARGIN = 0.2
 
 const VisualSection = () => {
     const wrapperRef = useRef<HTMLDivElement>(null)
@@ -123,18 +127,28 @@ const VisualSection = () => {
     }, [])
 
     return (
-        <div ref={ wrapperRef }>
-            <section ref={ sectionRef } className="relative flex h-screen flex-col items-center justify-end overflow-clip" style={{ "--t": TEXT_SIZE } as CSSProperties}>
-                <div className="container pointer-events-none absolute inset-x-0 top-1/2 z-1 hidden -translate-y-1/2 lg:block">
+        <div ref={ wrapperRef } className="hidden sm:block">
+            <section
+                ref={ sectionRef }
+                className="relative flex h-svh flex-col items-center justify-end overflow-clip pt-(--top) [--label:var(--label-m)] lg:[--label:0px]"
+                style={{
+                    "--t": TEXT_SIZE,
+                    "--top": TOP_SPACE,
+                    "--label-m": LABEL_SPACE,
+                } as CSSProperties}
+            >
+                <div className="container pointer-events-none z-1 mb-4 lg:absolute lg:inset-x-0 lg:top-1/2 lg:mb-0 lg:-translate-y-1/2">
                     <div className="grid overflow-hidden text-sm uppercase">
                         {
                             projects.map((project, index) => (
                                 <span key={ project.title } data-label className="col-start-1 row-start-1">
                                     [ { project.title } ]
+
                                     {" "}
+
                                     <span className="text-grey-500">
-                                    0{ index + 1 } / 0{ projects.length }
-                                </span>
+                                        0{ index + 1 } / 0{ projects.length }
+                                    </span>
                             </span>
                             ))
                         }
@@ -145,14 +159,14 @@ const VisualSection = () => {
                     className="relative z-2"
                     style={{
                         aspectRatio: RATIO,
-                        width: `min(60rem, calc(100% - 2rem), calc((100vh - 6rem - var(--t) * ${ 0.9 - OVERLAP - CLIP }) * ${ RATIO }))`,
+                        width: `min(60rem, calc(100% - 2rem), calc((100svh - var(--top) - var(--label) - var(--t) * ${ 0.9 - OVERLAP - CLIP }) * ${ RATIO }))`,
                     }}
                 >
                     {
                         projects.map((project, index) => (
                             <div key={ project.title } data-card
-                                className="absolute inset-0 overflow-hidden rounded-sm will-change-transform"
-                                style={{ zIndex: projects.length - index }}
+                                 className="absolute inset-0 overflow-hidden rounded-sm will-change-transform"
+                                 style={{ zIndex: projects.length - index }}
                             >
                                 <Image
                                     src={ project.image }

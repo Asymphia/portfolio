@@ -32,7 +32,7 @@ const StyledHeader = ({ header, tag, addButton=false, buttonText, addText=false 
 
             {
                 addText && (
-                    <p className="text-2xl text-black font-albert-sans font-medium">
+                    <p className="text-2xl text-black font-albert-sans font-medium text-nowrap">
                         2024 - 2026
                     </p>
                 )

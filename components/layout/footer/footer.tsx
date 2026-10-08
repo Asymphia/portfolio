@@ -5,7 +5,7 @@ import FooterReveal from "@/components/layout/footer/footer-reveal"
 const Footer = () => {
     return (
         <FooterReveal>
-            <footer className="bg-black pt-6 pb-8 space-y-12 md:space-y-18 mb-0!">
+            <footer className="bg-black pt-4 md:pt-6 pb-4 md:pb-8 space-y-12 md:space-y-18 mb-0!">
                 <FooterSlider />
 
                 <h2 className="text-display-fit text-white text-center">

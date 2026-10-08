@@ -12,7 +12,7 @@ const SingleProjectPage = async ({ params }: { params: Promise<{ slug: string }>
     }
 
     return (
-        <main className="space-y-50">
+        <main className="space-y-32 md:space-y-40 lg:space-y-50">
             <SingleProjectDetailsSection project={ project } />
             <ContactSection />
         </main>

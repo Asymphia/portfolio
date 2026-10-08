@@ -39,7 +39,7 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     }, [])
 
     return (
-        <ProjectsReveal className="space-y-8">
+        <ProjectsReveal className="space-y-4 lg:space-y-6 xl:space-y-8">
             {
                 images.map((image, index) => (
                     <div
