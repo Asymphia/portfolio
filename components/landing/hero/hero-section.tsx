@@ -129,7 +129,7 @@ const HeroSection = () => {
                 </span>
             </h1>
 
-            <p ref={ pRef } className="invisible mb-8 max-w-220 text-balance text-center text-2xl/8 sm:text-3xl/10 md:text-4xl/12 lg:text-5xl/16 md:mb-10">
+            <p ref={ pRef } className="invisible mb-8 sm:max-w-220 text-balance text-center text-2xl/8 sm:text-3xl/10 md:text-4xl/12 lg:text-5xl/16 md:mb-10">
                 Designing and coding web interfaces from Poland [ Rzeszów ]
             </p>
 

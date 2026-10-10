@@ -12,10 +12,12 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 const EASE = "expo.out"
 
 const ProjectsHero = () => {
+    const sectionRef = useRef<HTMLElement>(null)
     const h1Ref = useRef<HTMLHeadingElement>(null)
     const frameRef = useRef<HTMLSpanElement>(null)
 
     useEffect(() => {
+        const section = sectionRef.current!
         const h1 = h1Ref.current!
         const frame = frameRef.current!
         const words = h1.querySelectorAll<HTMLElement>("[data-split]")
@@ -26,7 +28,7 @@ const ProjectsHero = () => {
         }
 
         let cancelled = false
-        const ctx = gsap.context(() => {}, h1)
+        const ctx = gsap.context(() => {}, section)
 
         document.fonts.ready.then(() => {
             if (cancelled) {
@@ -58,15 +60,15 @@ const ProjectsHero = () => {
                     clearProps: "width,marginLeft,marginRight",
                 })
 
-                gsap.to(h1, {
+                gsap.to(section, {
                     opacity: 0,
                     ease: "none",
                     scrollTrigger: {
-                        trigger: h1,
+                        trigger: section,
                         start: "top top",
                         end: "bottom top",
-                        scrub: 0.8,
-                    },
+                        scrub: 0.8
+                    }
                 })
             })
         })
@@ -78,29 +80,31 @@ const ProjectsHero = () => {
     }, [])
 
     return (
-        <h1
-            ref={ h1Ref }
-            className="invisible flex flex-col items-center justify-center pt-28 sm:pt-40 lg:pt-50 leading-[0.9] text-nowrap
-                    lg:flex-row text-[min(22cqw,8rem)] lg:text-[min(12cqw,10rem)]"
-        >
-            <span data-split>
-                Ideas
-            </span>
+        <section ref={ sectionRef } className="@container container flex justify-center pt-28 sm:pt-40 lg:pt-50">
+            <h1 ref={ h1Ref } className="invisible flex flex-col items-center leading-[0.9] text-nowrap
+                    text-[min(20cqw,9rem)] lg:flex-row lg:text-[min(12cqw,10rem)]"
+            >
+                <span className="flex items-center lg:contents">
+                    <span data-split>
+                        Ideas
+                    </span>
 
-            <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
-                <Image
-                    src={ heroImg }
-                    alt="Computer workstation"
-                    priority
-                    sizes="(min-width: 1024px) 250px, 120px"
-                    className="h-auto w-[1.03em] max-w-none shrink-0"
-                />
-            </span>
+                    <span ref={ frameRef } className="ml-[0.12em] flex justify-center overflow-hidden rounded-sm lg:mx-[0.08em]">
+                        <Image
+                            src={ heroImg }
+                            alt="Computer workstation"
+                            priority
+                            sizes="(min-width: 1024px) 200px, 100px"
+                            className="h-auto w-[1.2em] max-w-none shrink-0"
+                        />
+                    </span>
+                </span>
 
-            <span data-split>
-                made real
-            </span>
-        </h1>
+                <span data-split>
+                    made real
+                </span>
+            </h1>
+        </section>
     )
 }
 

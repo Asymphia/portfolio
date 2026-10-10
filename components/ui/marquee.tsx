@@ -185,7 +185,7 @@ const Marquee = ({ children, speed = 50, gap = "2rem", hoverSlowdown = 0.35, cla
     }, [children])
 
     return (
-        <div data-cursor="drag" ref={ viewportRef } className="touch-pan-y overflow-hidden select-none">
+        <div data-cursor="drag" data-cursor-down="dragging" ref={ viewportRef } className="touch-pan-y overflow-hidden select-none">
             <div ref={ trackRef } className={`flex w-max will-change-transform ${ className }`}>
                 {
                     [0, 1].map(copy => (

@@ -29,6 +29,7 @@ const ContactForm = () => {
     const [state, formAction] = useActionState(submitContact, initialContactState)
     const [token, setToken] = useState("")
     const [sent, setSent] = useState(false)
+    const [turnstileReady, setTurnstileReady] = useState(false)
 
     const wrapperRef = useRef<HTMLDivElement>(null)
     const formRef = useRef<HTMLFormElement>(null)
@@ -49,40 +50,34 @@ const ContactForm = () => {
         issueFormToken().then(setToken).catch(() => {})
     }, [])
 
-    const mountWidget = useCallback(() => {
-        if (!SITE_KEY || !window.turnstile || !widgetRef.current || widgetId.current) {
+    useEffect(() => {
+        if (window.turnstile) {
+            setTurnstileReady(true)
+        }
+    }, [])
+
+    useEffect(() => {
+        if (!SITE_KEY || sent || !turnstileReady || !widgetRef.current || !window.turnstile) {
             return
         }
 
-        widgetId.current = window.turnstile.render(widgetRef.current, {
+        const id = window.turnstile.render(widgetRef.current, {
             sitekey: SITE_KEY,
             appearance: "interaction-only",
             theme: "light",
         })
-    }, [])
 
-    useEffect(() => () => {
-        if (widgetId.current) {
-            window.turnstile?.remove(widgetId.current)
+        widgetId.current = id
+
+        return () => {
+            window.turnstile?.remove(id)
             widgetId.current = undefined
         }
-    }, [])
+    }, [turnstileReady, sent])
 
     useEffect(() => {
         if (state.status === "error") {
             formRef.current?.querySelector<HTMLElement>("[aria-invalid='true']")?.focus()
-        }
-    }, [state])
-
-    useEffect(() => {
-        if (!state.formError) {
-            return
-        }
-
-        issueFormToken().then(setToken).catch(() => {})
-
-        if (widgetId.current) {
-            window.turnstile?.reset(widgetId.current)
         }
     }, [state])
 
@@ -126,6 +121,16 @@ const ContactForm = () => {
 
     return (
         <div ref={ wrapperRef }>
+            {
+                SITE_KEY && (
+                    <Script
+                        src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+                        strategy="afterInteractive"
+                        onReady={ () => setTurnstileReady(true) }
+                    />
+                )
+            }
+
             {
                 sent ? (
                     <ContactSuccess message={ state.message ?? "" } />
@@ -221,12 +226,6 @@ const ContactForm = () => {
                         </div>
 
                         <div ref={ widgetRef } className="sm:col-span-2 empty:hidden" />
-
-                        {
-                            SITE_KEY && (
-                                <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" strategy="afterInteractive" onReady={ mountWidget }/>
-                            )
-                        }
                     </form>
                 )
             }
