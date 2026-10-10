@@ -24,6 +24,7 @@ export type ContactState = {
     errors: FieldErrors
     values: ContactValues
     message?: string
+    formError?: string
 }
 
 export const emptyValues: ContactValues = {
@@ -42,12 +43,13 @@ export const initialContactState: ContactState = {
 }
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const HAS_LINK = /https?:\/\/|www\./gi
+
 export const MAX_MESSAGE = 500
+const MAX_LINKS_IN_MESSAGE = 2
 
-const text = (data: FormData, key: string) => {
-    const value = data.get(key)
-
-    return typeof value === "string" ? value.trim() : ""
+const countLinks = (value: string) => {
+    return value.match(HAS_LINK)?.length ?? 0
 }
 
 const isValidLink = (value: string) => {
@@ -60,6 +62,12 @@ const isValidLink = (value: string) => {
     }
 }
 
+const text = (data: FormData, key: string) => {
+    const value = data.get(key)
+
+    return typeof value === "string" ? value.trim() : ""
+}
+
 export const validateContact = (data: FormData) => {
     const values: ContactValues = {
         name: text(data, "name"),
@@ -67,7 +75,7 @@ export const validateContact = (data: FormData) => {
         company: text(data, "company"),
         link: text(data, "link"),
         message: text(data, "message"),
-        role: data.getAll("role").filter((value): value is string => typeof value === "string"),
+        role: [...new Set(data.getAll("role").filter((value): value is string => typeof value === "string"))]
     }
 
     const errors: FieldErrors = {}
@@ -78,6 +86,8 @@ export const validateContact = (data: FormData) => {
         errors.name = "Name must be at least 2 characters long."
     } else if (values.name.length > 100) {
         errors.name = "Name cannot exceed 100 characters."
+    } else if (countLinks(values.name) > 0) {
+        errors.name = "Please enter just your name."
     }
 
     if (!values.email) {
@@ -90,20 +100,24 @@ export const validateContact = (data: FormData) => {
         errors.company = "Please enter your company name."
     } else if (values.company.length > 100) {
         errors.company = "Company name cannot exceed 100 characters."
+    } else if (countLinks(values.company) > 0) {
+        errors.company = "Please enter just the company name."
     }
 
-    if (values.link && !isValidLink(values.link)) {
+    if (values.link && (values.link.length > 300 || !isValidLink(values.link))) {
         errors.link = "Please enter a valid URL. Try something like https://company.com."
     }
 
     if (values.role.length === 0) {
         errors.role = "Please select at least one role."
-    } else if (values.role.some(role => !ROLES.includes(role))) {
+    } else if (values.role.length > ROLES.length || values.role.some(role => !ROLES.includes(role))) {
         errors.role = "Invalid role selected."
     }
 
     if (values.message.length > MAX_MESSAGE) {
         errors.message = `Message must be ${ MAX_MESSAGE } characters or fewer (${ values.message.length }/${ MAX_MESSAGE }).`
+    } else if (countLinks(values.message) > MAX_LINKS_IN_MESSAGE) {
+        errors.message = `Please include at most ${ MAX_LINKS_IN_MESSAGE } links in your message.`
     }
 
     return { values, errors }
