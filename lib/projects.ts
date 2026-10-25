@@ -277,7 +277,10 @@ export const projects: Project[] = [
         ],
         year: 2026,
         role: "Front-end Developer",
-        isFeatured: true
+        isFeatured: true,
+        links: {
+            websiteLink: "https://tqmsoft.com/"
+        }
     },
     {
         id: 7,
