@@ -227,7 +227,7 @@ export const projects: Project[] = [
         ],
         year: 2026,
         role: "Front-end developer",
-        isFeatured: false,
+        isFeatured: true,
         links: {
             projectRepoLink: "https://github.com/Asymphia/matdev-pm",
             projectDownloadLink: "https://github.com/kpustelak/matdev-pm-backend/releases"
@@ -254,7 +254,7 @@ export const projects: Project[] = [
         ],
         year: 2026,
         role: "Front-end developer & UI/UX designer",
-        isFeatured: false,
+        isFeatured: true,
         links: {
             projectRepoLink: "https://github.com/Asymphia/scribre"
         }
@@ -299,7 +299,7 @@ export const projects: Project[] = [
         ],
         year: 2025,
         role: "WordPress Developer",
-        isFeatured: true,
+        isFeatured: false,
         links: {
             websiteLink: "https://qliopanel.com/"
         }
@@ -366,7 +366,7 @@ export const projects: Project[] = [
         ],
         year: 2025,
         role: "WordPress Developer",
-        isFeatured: true,
+        isFeatured: false,
         links: {
             websiteLink: "https://pasiekastefanek.pl/"
         }
