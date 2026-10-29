@@ -103,16 +103,15 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <section
-            ref={ sectionRef }
-            className="container flex flex-col items-center pt-32 sm:pt-40 lg:pt-50"
-        >
+        <section ref={ sectionRef } className="container flex flex-col items-center pt-32 sm:pt-40 lg:pt-50">
             <h1
                 ref={ h1Ref }
                 className="invisible mb-5 flex flex-col items-center leading-[0.9] text-nowrap
                     md:mb-6 lg:flex-row text-[min(26cqw,10rem)] lg:text-[min(17cqw,15rem)]"
             >
-                <span data-split>Julia</span>
+                <span data-split>
+                    Julia
+                </span>
 
                 <span className="flex items-center lg:contents">
                     <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
@@ -125,7 +124,9 @@ const HeroSection = () => {
                         />
                     </span>
 
-                    <span data-split>Kawa</span>
+                    <span data-split>
+                        Kawa
+                    </span>
                 </span>
             </h1>
 

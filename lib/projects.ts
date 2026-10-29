@@ -268,7 +268,7 @@ export const projects: Project[] = [
         tags: ["WordPress", "Roots Sage", "Custom Theme", "SCSS", "PHP", "WooCommerce"],
         featuredImage: tqmSoft,
         images: [
-            { image: tqmSoft1, alt: "TQM Soft website -  hero" },
+            { image: tqmSoft1, alt: "TQM Soft website - hero" },
             { image: tqmSoft2, alt: "TQM Soft website - megamenu 1" },
             { image: tqmSoft3, alt: "TQM Soft website - megamenu 2" },
             { image: tqmSoft4, alt: "TQM Soft website - knowledge base" },

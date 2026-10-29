@@ -6,6 +6,7 @@ import CircleSection from "@/components/landing/circle/circle-section"
 import SkillstackSection from "@/components/landing/skillstack/skillstack-section"
 import VisualSection from "@/components/landing/visual/visual-section"
 import ContactSection from "@/components/landing/contact/contact-section"
+import WhatIDoSection from "@/components/landing/what-i-do/what-i-do-section"
 
 const LandingPage = () => {
     return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
             <HeroSection />
             <SliderSection />
             <AboutSection />
+            <WhatIDoSection />
             <ProjectsSection />
             <CircleSection />
             <SkillstackSection />

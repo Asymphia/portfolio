@@ -4,12 +4,13 @@ import Tag from "@/components/ui/tag"
 
 const AboutTags = () => {
     const tags = [
+        "Front-End Development",
+        "Full-Stack Development",
+        "UI/UX Design",
         "WordPress Websites",
         "E-commerce Websites",
         "Custom WordPress Themes",
         "Custom WordPress Plugins",
-        "Front-End Development",
-        "UI/UX Design",
         "SEO & Copywriting"
     ]
 
