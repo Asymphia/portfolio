@@ -18,9 +18,9 @@ const AboutHeader = () => {
                 />
 
                 <h2 data-about-text className="text-2xl/8 sm:text-3xl/9 md:text-4xl/10 lg:text-5xl/14 text-grey-500 text-pretty">
-                    Hey, I'm Julia! I spend most of my time building WordPress and WooCommerce sites in Divi.
-                    Alongside that I code React and Next.js projects and do UI/UX design in Figma. I also build custom PHP
-                    themes and plugins whenever a project needs something beyond page builders.
+                    Hey, I'm Julia! I spend most of my time coding web applications with React and Next.js.
+                    Alongside that I design UI/UX interfaces in Figma and build WordPress & WooCommerce sites in Divi.
+                    I also develop custom PHP themes and plugins whenever a project needs something beyond page builders.
                 </h2>
             </div>
         </header>
