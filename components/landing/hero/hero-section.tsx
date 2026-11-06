@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
-import Image from "next/image"
-import heroImg from "@/assets/hero-image.jpg"
 import Button from "@/components/ui/button"
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline"
 
@@ -115,13 +113,18 @@ const HeroSection = () => {
 
                 <span className="flex items-center lg:contents">
                     <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
-                        <Image
-                            src={ heroImg }
-                            alt="Computer workstation"
-                            priority
-                            sizes="(min-width: 1024px) 250px, 120px"
-                            className="h-auto w-[1.03em] max-w-none shrink-0"
-                        />
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
+                            aria-hidden="true"
+                            className="h-auto w-[1.03em] max-w-none shrink-0 object-cover transform-gpu [image-rendering:auto]"
+                        >
+                            <source src="/hero.mp4" type="video/mp4" />
+                            <source src="/hero.webm" type="video/webm" />
+                        </video>
                     </span>
 
                     <span data-split>

@@ -1,7 +1,5 @@
 "use client"
 
-import Image from "next/image"
-import heroImg from "@/assets/hero-image-projects.jpg"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -89,15 +87,21 @@ const ProjectsHero = () => {
                         Ideas
                     </span>
 
-                    <span ref={ frameRef } className="ml-[0.12em] flex justify-center overflow-hidden rounded-sm lg:mx-[0.08em]">
-                        <Image
-                            src={ heroImg }
-                            alt="Computer workstation"
-                            priority
-                            sizes="(min-width: 1024px) 200px, 100px"
+                    <span ref={ frameRef } className="mx-[0.08em] flex justify-center overflow-hidden rounded-sm">
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
+                            aria-hidden="true"
                             className="h-auto w-[1.2em] max-w-none shrink-0"
-                        />
+                        >
+                            <source src="/hero.mp4" type="video/mp4" />
+                            <source src="/hero.webm" type="video/webm" />
+                        </video>
                     </span>
+
                 </span>
 
                 <span data-split>
