@@ -16,7 +16,7 @@ const AboutTags = () => {
 
     return (
         <div className="flex gap-6 md:gap-12 items-center">
-            <Image src={ aboutImg } alt="Screenshot of a TQM Soft's website" className="w-full hidden lg:block md:max-w-71" />
+            <Image src={ aboutImg } alt="Screenshot of a TQM Soft's website" className="w-full hidden lg:block md:max-w-71 rounded-sm" />
 
             <div className="space-y-4">
                 <p className="text-black text-sm">

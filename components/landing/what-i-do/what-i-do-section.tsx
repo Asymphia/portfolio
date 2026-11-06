@@ -279,7 +279,7 @@ const WhatIDoSection = () => {
 
     return (
         <>
-            <section ref={ sectionRef } className="h-screen bg-grey-300 relative py-20 lg:py-30">
+            <section ref={ sectionRef } className="h-screen bg-grey-300 relative py-18 lg:py-24">
                 <div className="container h-full">
                     <AccentText>
                         What I can help you with
